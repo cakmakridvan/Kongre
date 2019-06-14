@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">idRc 2019</string>
+    <string name="kullanici">Kullanıcı Adı</string>
+    <string name="parola">Şifre</string>
+    <string name="kullanici_hatirla">Beni Hatırla</string>
+    <string name="giris">Giriş Yap</string>
+    <string name="bilgiler_eksik">Bilgileriniz Eksik!!</string>
+    <string name="giris_hata">Hatalı Giriş,Bilgilerinizi Kontrol Ediniz</string>
+    <string name="msj_status_order">Liste Boş</string>
+    <string name="conference_name">Etkinlik:</string>
+    <string name="conference_shortName">Kodu:</string>
+    <string name="conference_location">Yer:</string>
+    <string name="conference_address">Adres:</string>
+    <string name="conference_website">Web Sitesi:</string>
+    <string name="conference_panel">Panel:</string>
+    <string name="conference_startDate">Başlangıç Tarihi:</string>
+    <string name="conference_endDate">Bitiş Tarihi:</string>
+    <string name="name_etkinlik">Etkinlik Listesi</string>
+    <string name="name_bildiri">Bildiri Listesi</string>
+    <string name="search_hint">Type name…</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="bildiri_listesi">Bildiri Listesi</string>
+    <string name="etkinlik_listesi">Etkinlik Listesi</string>
+    <string name="bildiriNo">No:</string>
+    <string name="bildiriKonu">Konu:</string>
+    <string name="bildiriTuru">Türü:</string>
+    <string name="bildiriBasligi">Başlığı:</string>
+    <string name="bildiriYazarlar">Yazar Bilgileri:</string>
+    <string name="bildiriDurumu">Durumu:</string>
+
+</resources>
