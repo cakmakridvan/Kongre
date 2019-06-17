@@ -26,6 +26,7 @@ import com.rota.kongresistem.sevices.Service;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import io.paperdb.Paper;
 
@@ -79,14 +80,42 @@ public class Login extends AppCompatActivity {
           }
     }
 
+/*    @OnCheckedChanged(R.id.btn_remember) void Checking(){
+
+        String get_name = name.getText().toString().trim();
+        String get_password = sifre.getText().toString().trim();
+
+        if(remember_me.isChecked()){
+
+            Boolean boolChecked = remember_me.isChecked();
+            Paper.book().write("userName",get_name);
+            Paper.book().write("Password",get_password);
+            Paper.book().write("Checked",boolChecked);
+
+        }else{
+            Paper.book().delete("userName");
+            Paper.book().delete("Password");
+            Paper.book().delete("Checked");
+        }
+
+    }*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         ButterKnife.bind(Login.this);
         Paper.init(Login.this);
+
+        String get_token = Paper.book().read("kongre_token");
+        if(get_token != null){
+
+            Intent go_main = new Intent(Login.this,Main.class);
+            startActivity(go_main);
+            finish();
+        }
+
         progressDialog = new ProgressDialog(Login.this);
-        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         progressDialog.setIndeterminate(true);
         getRemember_meData();
 
@@ -99,6 +128,8 @@ public class Login extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+
 
     @SuppressLint("StaticFieldLeak")
     public class UserLoginTask extends AsyncTask<Void, Object, Boolean> {

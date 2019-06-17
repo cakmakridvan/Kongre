@@ -60,7 +60,6 @@ public class EtkinlikBilgileri extends AppCompatActivity {
         });
 
         progressDialog = new ProgressDialog(EtkinlikBilgileri.this);
-        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         progressDialog.setIndeterminate(true);
         lv = findViewById(R.id.user_list);
 

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:id="@+id/app_exit"
-            android:src="@drawable/icon_delete"
+            android:src="@drawable/ic_exit"
             android:background="@null"
             android:paddingRight="10dp"
             />
@@ -53,7 +53,281 @@
             android:src="@drawable/idrc_logo"
             />
 
-        <Button
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:background="@color/colorAccent"
+            android:gravity="center"
+            android:id="@+id/etkinlik_liste"
+                >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/activity_list"
+                android:background="@null"
+                android:id="@+id/btn_etkinlik_listesi"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_etkinlik"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:background="@color/coloraqua"
+            android:gravity="center"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:src="@drawable/bildiri_listesi"
+                android:background="@null"
+                android:id="@+id/btn_etkinlik_bildiri"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_bildiri"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/calendar"
+                    android:background="@null"
+                    android:id="@+id/btn_kongre_takvim"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_takvim"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:background="@color/orange"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/handshake"
+                    android:background="@null"
+                    android:id="@+id/btn_sponsor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_sponsor"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:background="@color/gray"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/exhibition"
+                    android:background="@null"
+                    android:id="@+id/btn_exhibition"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_exhibition"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:background="@color/red"
+                android:gravity="center"
+                >
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:src="@drawable/duyurular"
+                    android:background="@null"
+                    android:id="@+id/btn_info"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_duyuru"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:background="@color/purple"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/bilgilendirme"
+                        android:background="@null"
+                        android:id="@+id/btn_about"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_about"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    >
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        android:background="@null"
+                        android:id="@+id/btn_user_info"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_katilimci_info"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:orientation="vertical"
+                    android:background="@color/dark_blue"
+                    android:gravity="center"
+                    >
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:src="@drawable/report"
+                        android:background="@null"
+                        android:id="@+id/btn_summary"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_summary"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+<!--        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_etkinlik_listesi"
@@ -61,10 +335,10 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/btn_item_clicked"
             android:textColor="@color/white"
-            />
+            />-->
 
 
-        <Button
+<!--        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_etkinlik_bildiri"
@@ -72,7 +346,7 @@
             android:background="@drawable/btn_item_clicked"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            />
+            />-->
 
     </LinearLayout>
 

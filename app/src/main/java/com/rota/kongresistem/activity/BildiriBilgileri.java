@@ -62,7 +62,6 @@ public class BildiriBilgileri extends AppCompatActivity{
         });
 
         progressDialog = new ProgressDialog(BildiriBilgileri.this);
-        progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         progressDialog.setIndeterminate(true);
 
         recyclerView = findViewById(R.id.bildiri_list);
