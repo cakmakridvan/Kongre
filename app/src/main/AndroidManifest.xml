@@ -24,33 +24,35 @@
 
         <activity android:name=".activity.EtkinlikBilgileri"
         android:theme="@style/AppThemeLight"
-        android:screenOrientation="portrait"
+
         android:label=""
             />
 
         <activity android:name=".Main"
             android:theme="@style/AppThemeLight"
-            android:screenOrientation="portrait"
+
             android:label=""
             />
 
         <activity android:name=".activity.BildiriBilgileri"
             android:theme="@style/AppThemeLight"
-            android:screenOrientation="portrait"
+
             android:label=""
             />
 
         <activity android:name=".activity.About"
             android:theme="@style/AppThemeLight"
-            android:screenOrientation="portrait"
+
             android:label=""
             />
 
         <activity android:name=".activity.SummarySending"
             android:theme="@style/AppThemeLight"
-            android:screenOrientation="portrait"
+
             android:label=""
             />
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
     </application>
 
