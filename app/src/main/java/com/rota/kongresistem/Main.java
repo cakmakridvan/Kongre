@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.rota.kongresistem.activity.About;
 import com.rota.kongresistem.activity.BildiriBilgileri;
 import com.rota.kongresistem.activity.EtkinlikBilgileri;
+import com.rota.kongresistem.activity.Program;
 import com.rota.kongresistem.activity.SummarySending;
 import com.rota.kongresistem.adapter.BildiriAdapter;
 import com.rota.kongresistem.login.Login;
@@ -109,7 +110,9 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btn_kongre_takvim:
 
-                Toast.makeText(Main.this,"Yakında eklenecektir..",Toast.LENGTH_SHORT).show();
+                /*Toast.makeText(Main.this,"Yakında eklenecektir..",Toast.LENGTH_SHORT).show();*/
+                Intent go_kongre = new Intent(Main.this,Program.class);
+                startActivity(go_kongre);
 
                 break;
 

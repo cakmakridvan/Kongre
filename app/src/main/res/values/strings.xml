@@ -31,7 +31,7 @@
     <string name="hesap_degistir">Çıkış Yapmak İstediğinizden Emin misiniz?</string>
     <string name="iptal">İptal</string>
     <string name="hesap_cikis">Çıkış Yap</string>
-    <string name="name_takvim">Kongre Takvimi</string>
+    <string name="name_takvim">Program</string>
     <string name="name_katilimci_info">Katılımcı \nBilgilendirme</string>
     <string name="name_sponsor">Sponsorlar</string>
     <string name="name_exhibition">Sergi Firmaları</string>
@@ -43,4 +43,8 @@
     <string name="name_summary_title1">idrc 2019’a katılmak veya sunum yapmak isteyen katılımcılar bildiri gönerilerini ve kayıt işlemlerini</string>
     <string name="name_summary_title2">http://kongresistemi.com/idrc2019 adresinden yaptıracaklardır.</string>
     <string name="name_summary_title3">Bildiri özetleriniz, 15 Haziran 2019 tarihine kadar hakemler tarafından değerlendirildikten sonra KABUL/RED durumu tarafınıza bildirilecektir.\n\nSunumu gerçekleştirilen bildirilerin Tam Metinleri değerlendirmeye alınarak idrc 2019 Tam Metinler kitabında veya isteğinize göre Resilience Dergisinde makale olarak basılacaktır.\n\nÖzetler Türkçe ve İngilizce olarak 2 dilde 400 kelimeyi aşmayacak şekilde gönderilmelidir. Tam metinler tek dilde 4 sayfayı geçyecek formatta gönderilebilir.\n\nKayıt ücreti ödemeyen katılımcıların bildirileri özet kitabına girmeyecek ve sunum yapamayacaklardır.\n\nKongreye dinleyici olarak katılmak ücretsizdir. Dinleyiciler kayıt haklarından istifade edemeyeceklerdir. ( Yaka kartı, öğle yemekleri, kongre kiti v.b. )</string>
+    <string name="program">Program</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

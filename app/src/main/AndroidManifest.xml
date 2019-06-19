@@ -48,7 +48,11 @@
 
         <activity android:name=".activity.SummarySending"
             android:theme="@style/AppThemeLight"
+            android:label=""
+            />
 
+        <activity android:name=".activity.Program"
+            android:theme="@style/AppThemeLight"
             android:label=""
             />
 
