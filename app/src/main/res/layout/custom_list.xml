@@ -2,39 +2,39 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:layout_marginTop="10dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/layout_bg">
+    android:background="@drawable/layout_bg"
+    android:orientation="vertical"
+    >
 
 <LinearLayout
 android:layout_width="match_parent"
-android:layout_height="70dp"
+android:layout_height="wrap_content"
 android:layout_marginTop="5dp"
 android:layout_marginLeft="5dp"
 android:layout_marginRight="5dp"
 android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/clock"
+        android:padding="5dp"
+        />
 
 
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="10.00 - 10.20"
-    android:padding="5dp"
+    android:paddingTop="5dp"
     android:textColor="@color/black"
     android:textSize="12sp"
     android:id="@+id/tab1_clock"
     />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:text="Açılış Sunumları"
-    android:textColor="@color/black"
-    android:textSize="16sp"
-    android:id="@+id/tab1_title"
-    />
 
 <!--    <LinearLayout
         android:layout_width="match_parent"
@@ -52,5 +52,59 @@ android:orientation="horizontal">
     </LinearLayout>-->
 
 </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="@string/salon_speaker"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="......"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            android:id="@+id/konusmaci_salon"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/speakers"
+            android:paddingTop="5dp"
+            android:paddingLeft="10dp"
+            />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Açılış Sunumları"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:id="@+id/tab1_title"
+        android:padding="5dp"
+        />
+
+    </LinearLayout>
 
 </LinearLayout>

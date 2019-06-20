@@ -16,14 +16,16 @@ public class Tab1Adapter extends ArrayAdapter<String> {
     private final Activity context;
     private final String[] maintitle;
     private final String[] subtitle;
+    private final String[] baskan;
 
-    public Tab1Adapter(Activity context, String[] maintitle,String[] subtitle) {
+    public Tab1Adapter(Activity context, String[] maintitle,String[] subtitle,String[] baskan) {
         super(context, R.layout.custom_list, maintitle);
         // TODO Auto-generated constructor stub
 
         this.context=context;
         this.maintitle=maintitle;
         this.subtitle=subtitle;
+        this.baskan=baskan;
 
     }
 
@@ -33,9 +35,11 @@ public class Tab1Adapter extends ArrayAdapter<String> {
 
         TextView titleText = (TextView) rowView.findViewById(R.id.tab1_clock);
         TextView subtitleText = (TextView) rowView.findViewById(R.id.tab1_title);
+        TextView bskanText = rowView.findViewById(R.id.konusmaci_salon);
 
         titleText.setText(maintitle[position]);
         subtitleText.setText(subtitle[position]);
+        bskanText.setText(baskan[position]);
 
         return rowView;
 
