@@ -47,6 +47,7 @@ android:orientation="horizontal">
     android:layout_height="wrap_content"
     android:src="@android:drawable/btn_star"
     android:background="@null"
+    android:id="@+id/img_favorite"
     />
 
     </LinearLayout>-->

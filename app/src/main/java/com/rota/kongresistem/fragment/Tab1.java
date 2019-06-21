@@ -24,12 +24,12 @@ import com.rota.kongresistem.adapter.Tab1Adapter;
 public class Tab1 extends Fragment implements View.OnClickListener {
 
     private ListView listView;
-    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9;
+    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn14;
     View inflate;
     private TextView title;
     private String clilcked_btn = "";
 //for Salon 3
-    String[] txt_clock ={
+    private String[] txt_clock ={
             "10:00-10:40",
             "10:40-11:00","11:00-11:20",
             "11:20-11:40","11:40-12:00",
@@ -39,7 +39,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             "17:40 - 18:00"
     };
 
-    String[] txt_title  ={
+    private String[] txt_title  ={
             "AÇILIŞ SUNUMLARI","ŞÜKRÜ ERSOY, ÖZCAN ERDOĞAN, FİLİZ KATMAN, SERHAT YILMAZ (9731)",
             "REZA SABER, VEYSEL IŞIK, AYŞE ÇAĞLAYAN (9897)","EFNAN ŞORA GÜNAL, UĞUR GÜREL (9907)",
             "ŞENER CERYAN (9959)",
@@ -49,7 +49,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     };
 
-    String[] txt_konu = {"","İNSANOĞLUNU BEKLEYEN TEHLİKELER\n" +
+    private String[] txt_konu = {"","İNSANOĞLUNU BEKLEYEN TEHLİKELER\n" +
             "HAZARDS FOR HUMANKIND","ARAS FAY ZONU BOYUNCA (KB İRAN) MORFOMETRİK VE INSAR VERİ ANALİZİYLE DOĞAL AFET RİSKLERİNİN BELİRLENMESİ\n" +
             "DETERMİNATİON OF NATURAL DİSASTER RİSKS ALONG ARAS FAULT ZONE (NW IRAN) USİNG MORPHOMETRİC AND INSAR DATA ANALYSİS\n","YERALTI MADENLERİNDE SİSMİK AKTİVİTELERİN TAHMİNİ İÇİN ÖZNİTELİKLERİN ANALİZİ\n" +
             "ANALYSİS OF FEATURES FOR PREDİCTİON OF SEİSMİC ACTİVİTİES İN UNDERGROUND MİNES\n","ALTINOLUK-GÜRE (BALIKESİR) YERLEŞİM ALANININ SIVILAŞMA ŞİDETİ VE FAYLARDAN UZAKLIĞIN BİRLİKTE KULLANILARAK MİKRO-BÖLGELENDİRİLMESİ\n" +
@@ -63,17 +63,17 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     };
 
-    String[] oturum_baskan = {
+    private String[] oturum_baskan = {
             "ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY",
             "HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU"
     };
 
 //for Salon 5
-    String[] txt_clock2 ={
+    private String[] txt_clock2 ={
             "10:00-10:40"
     };
 
-    String[] txt_title2 ={
+    private String[] txt_title2 ={
             "AÇILIŞ SUNUMLARI","YUSUF ZAHİT GÜNDOĞDU, GÖRKEM İÇÖZ, YASİN ARSLAN (9473)","HÜSEYİN MUNGAN, DİLEK CANSU BOZACIOĞLU, AYŞE BENGÜ SÜNBÜL, ÖMER FARUK ÇAPAR (9634)",
             "HÜLAGÜ ETHEMOĞLU (9795)","GÖKHAN DEMİR, AHMET İDİKURT, UTKU KÖKTAN, MUZAFFER KEREM ERTEK (9944)",
 
@@ -81,7 +81,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             "FATMA GÜNDÜZ AKAN, SEVDA DEMİRÖZ YILDIRIM (9737)","DERYA DEMİRDİZEN ÇEVİK (9758)"
     };
 
-    String[] txt_konu2 = {"","ZEMİN ENJEKSİYON YÖNTEMİ İLE MEVCUT BİR ÜRETİM TESİSİNDEKİ SIVILAŞMA RİSKİNİN GİDERİLMESİ\n" +
+    private String[] txt_konu2 = {"","ZEMİN ENJEKSİYON YÖNTEMİ İLE MEVCUT BİR ÜRETİM TESİSİNDEKİ SIVILAŞMA RİSKİNİN GİDERİLMESİ\n" +
             "MITIGATION OF SOIL LIQUEFACTION OF AN EXISTING PRODUCTION FACILITY BY INJECTION METHOD","SONLU ELEMANLARA DAYALI SAYISAL MODEL ANALİZİ; SIVILAŞABİLİR ZEMİNE UYGULANAN ZEMİN İYİLEŞTİRME\n" +
             "NUMERICAL ANALYSIS USING FINITE ELEMENT METHOD; SOIL IMPROVEMENT ON LIQUEFY AREA","ZEMİN YAPI ETKİLEŞİMİNİN HASAR OLASILIĞINA ETKİSİ\n" +
             "EFFECT SOİL STRUCTURE İNTERACTİON ON THE PROBABİLİTY OF DAMAGE","DERİN KAZILARDA İKSA SİSTEMLERİNİN TASARIM DEFORMASYONLARININ ALETSEL GÖZLEMLERLE KARŞILAŞTIRILMASI\n" +
@@ -96,13 +96,13 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     };
 
-    String[] oturum_baskan2 = {
+    private String[] oturum_baskan2 = {
             "HÜLAGÜ ETHEMOĞLU","HÜLAGÜ ETHEMOĞLU","HÜLAGÜ ETHEMOĞLU","HÜLAGÜ ETHEMOĞLU","HÜLAGÜ ETHEMOĞLU",
 
             "NİLGÜN OKAY","NİLGÜN OKAY","NİLGÜN OKAY","NİLGÜN OKAY","NİLGÜN OKAY"
     };
 //for Salon 6
-    String[] txt_title3 ={
+    private String[] txt_title3 ={
             "AÇILIŞ SUNUMLARI","HANNA RİYANTO (10012)","NİLÜFER AKINCITÜRK, EBRU GÜNAÇAR, AYŞE BETÜL YAZICI (10072)","HATİCE GÜNSELİ DEMİRKOL (10087",
             "DENİZ ÖZGE AYTAÇ, TÜLİN VURAL ARSLAN (10096)",
 
@@ -110,7 +110,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         "GÖKHAN AL, MEHMET İNANÇ ONUR (9721)",""
     };
 
-    String[] txt_konu3 ={
+    private String[] txt_konu3 ={
             "","AFET SONRASI DURUMLARDA ALANLAR İÇİNDEKİ GÜVENLİK AÇIĞINI EN AZA İNDİRME KÜLTÜR VE MÜLTECİ KATILIMI SAYESİNDE.\n" +
             "MİNİMİZİNG VULNERABİLİTY WİTHİN SPACES IN POST DİSASTER SİTUATİONS THROUGH CULTURE & REFUGEE PARTİCİPATİON\n","ADAPAZARI 99 DEPREMİ SONRASI YAPILAŞMA SÜRECİNİN KENTE ETKİLERİ\n" +
             "EFFECTS OF RECONSTRUCTION PROCESS ON THE CITY AFTER ADAPAZARI 1999 EARTHQUAKE","DOĞA VE İNSAN İLİŞKİLERİ AÇISINDAN PORSUK NEHRİ KIYISINDA DEĞİŞİM/DÖNÜŞÜM/ÖZGÜNLÜK\n" +
@@ -128,21 +128,21 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             ""
     };
 
-    String[] oturum_baskan3 = {
+    private String[] oturum_baskan3 = {
             "HATİCE GÜNSELİ DEMİRKOL","HATİCE GÜNSELİ DEMİRKOL","HATİCE GÜNSELİ DEMİRKOL","HATİCE GÜNSELİ DEMİRKOL","HATİCE GÜNSELİ DEMİRKOL",
 
             "GÖKHAN AL","GÖKHAN AL","GÖKHAN AL","GÖKHAN AL","GÖKHAN AL"
     };
 
 //for Salon 7
-    String[] txt_title4 ={
+    private String[] txt_title4 ={
             "AÇILIŞ SUNUMLARI","PINAR ACAR, ELİF YEŞİM KÖSTEN (10044)","RUMEYSA MELAN, BÜŞRA GÜDEN, HAKAN ARSLAN (9489)","FEYZA NUR IŞIK, ESRA MUTLU, HAKAN ARSLAN (9595)",
             "HAKAN ARSLAN, ALPER ÜNLÜ (9834)",
 
         "CENGİZ İPEK (9654)","ALİ POLAT, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, EMRE AYTUĞ ÖZSÖY (9674)","ÜMİT KUT, NAZİLE URAL (9841)","YEŞİM ERBİL, BÜLENT TÜTMEZ (9954)",""
     };
 
-    String[] txt_konu4 ={
+    private String[] txt_konu4 ={
             "","İZMİT MERKEZ KENTSEL KONUTUNDA MEKANSAL KİMLİK ve DEPREM RİSKİ İLİŞKİSİ: HAFIZ BİNBAŞI CADDESİ İNCELEMESİ\n" +
             "RELATION BETWEEN SPATIAL IDENTITY and EARTHQUAKE RISK IN CENTRAL IZMIT URBAN RESIDENCIALS: HAFIZ BINBASI STREET ANALYSIS","AFET SONRASI MODÜLER KONUT BİRİMİ TASARIMI İÇİN YENİLİKÇİ VE SİSTEMATİK BİR TASARIM YAKLAŞIM ÖNERİSİ\n" +
             "AN INNOVATIVE AND SYSTEMATIC APPROACH FOR POST DISASTER MODULAR HOUSING UNIT DESIGN\n","MİMARİ TASARIM STÜDYOSUNDA AFET SONRASI BARINMADA KULLANILABİLECEK STRATEJİLERİN KATILIMCI TASARIM YÖNTEMLERİ AÇISINDAN DEĞERLENDİRİLMESİ\n" +
@@ -160,21 +160,21 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             ""
     };
 
-    String[] oturum_baskan4 = {
+    private String[] oturum_baskan4 = {
             "ELİF YEŞİM KÖSTEN","ELİF YEŞİM KÖSTEN","ELİF YEŞİM KÖSTEN","ELİF YEŞİM KÖSTEN","ELİF YEŞİM KÖSTEN",
 
             "YEŞİM ERBİL","YEŞİM ERBİL","YEŞİM ERBİL","YEŞİM ERBİL","YEŞİM ERBİL"
     };
 
 //for Salon 8
-    String[] txt_title5 ={
+    private String[] txt_title5 ={
             "AÇILIŞ SUNUMLARI","FEVZİYE DENİZ ATASAGUN, İFFET BİLLUR (9863)","RUBİN KARAKOYUNLU (9899)","FATMA HARAN, EMRE KİSHALI (9837)","NİLÜFER KIZILKAYA ÖKSÜZ, ALİ MURAT TANYER (9931)",
 
             "YASİN ZENCİR, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, KAMİL BEKİR AFACAN (9669)","GÖKHAN ŞAHİN, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, ERSİN GÜLER (9673)","RECEP BAKIŞ, YILDIRIM BAYAZIT, FATMA ÇİĞDEM ŞİRİN (9676)",
             "EKIN OZER (9880)","BİHTER DÖNMEZ (9587)"
     };
 
-    String[] txt_konu5 ={
+    private String[] txt_konu5 ={
             "","KÜLTÜRÜ AFETLERDEN AŞIRMAK: KÜLTÜR VE TURİZM BAKANLIĞI HİBELERİNİN KÜLTÜR VARLIĞI SİVİL MİMARİ AÇISINDAN ÖNEMİ\n" +
                     "GETTING CULTURE THROUGH DISASTERS: IMPORTANCE OF RESTORASTİON GRANTS OF TURKİSH MİNİSTRY OF CULTURE AND TOURİSM FOR CİVİL HERİTAGE\n",
             "TARİHİ YAPILARDA SÜRDÜRÜLEBİLİRLİK VE PLANLI KORUMA BAĞLAMINDA MİMAR SİNAN ÇARŞI HAMAMI’NIN DEĞERLENDİRİLMESİ\n" +
@@ -196,20 +196,20 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                     "INVESTİGATİON OF EARTHQUAKE ISOLATOR SYSTEMS APPLİED İN CONSTRUCTİON TECHNOLOGY"
     };
 
-    String[] oturum_baskan5 = {
+    private String[] oturum_baskan5 = {
             "EMRE KİSHALİ","EMRE KİSHALİ","EMRE KİSHALİ","EMRE KİSHALİ","EMRE KİSHALİ",
 
             "RECEP BAKIŞ","RECEP BAKIŞ","RECEP BAKIŞ","RECEP BAKIŞ","RECEP BAKIŞ"
     };
 //for Salon 9
-    String[] txt_title6 ={
+    private String[] txt_title6 ={
             "AÇILIŞ SUNUMLARI","EREN BALABAN, ALES SMEJDA, MEHMET İNANC ONUR (9308)","HÜSEYİN BAYRAKTAR, ELİF SAHTİYANCI, ALİ KURU, BURCU YILMAZ BAYRAKTAR (9480)",
             "ASHFAQUE AHMED SOOMRO (9481)","AİSHA AL.OMAR (9888)",
 
             "ALİ UTKU ŞAHİN (9415)","RÜYA KAYA (9551)","MİNE NAZAN KERİMAK ÖNER (9668)","ARDA ŞORMAN, MUSTAFA CANSARAN ERTAŞ (10069)",""
     };
 
-    String[] txt_konu6 ={
+    private String[] txt_konu6 ={
             "","FARKLİ DOLGU MALZEMESİNE SAHİP DONATİLİ ISTİNAD DUVARLARİNİN PERFORMANSLARİNİN DEGERLENDİRİLMESİ\n" +
             "PERFORMANCE ANALYSİS OF REİNFORCED EARTH WALLS WİTH DİFFERENT SOİLS",
             "OKULLARDA YAPISAL OLMAYAN ELEMANLARIN AFET KAYNAKLI OLASI RİSKLERİNİN L TİPİ MATRİS YÖNTEMİYLE BELİRLENMESİ\n" +
@@ -230,20 +230,20 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             ""
     };
 
-    String[] oturum_baskan6 = {
+    private String[] oturum_baskan6 = {
             "ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ",
 
             "MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER"
     };
 //for Salon 10
-    String[] txt_title7 ={
+    private String[] txt_title7 ={
             "AÇILIŞ SUNUMLARI","SEMRA KÖSE, HASAN TUTAR (10064)","NİMET KARAGÖZ, FATİH GÜLGEN, KEREM PEKER (10064)","ASHFAQUE AHMED SOOMRO (9481)","AİSHA AL.OMAR (9888)",
 
             "İSMAİL GÖKDAY (9662)","MURAT YAMAN, ERKAN ÇAKIR, OZAN YETKİN (9679)","BURAK YAPRAK, SELİM YAZICI (9906)","FAHRİ ÇAKI, ALPER UZUN, ABDURRAHMAN ÖZKAN (9982)",""
 
     };
 
-    String[] txt_konu7 ={
+    private String[] txt_konu7 ={
             "","KRİZ DÖNEMLERİNDE BİLİŞSEL ESNEKLİĞİN ÖNEMİ ÜZERİNE BİR ARAŞTIRMA\n" +
             "A RESEARCH ON THE IMPORTANCE OF COGNITIVE FLEXIBILITY IN CRISIS PERIODS",
             "TÜRKİYE KAR BÖLGE VERİLERİNİN COĞRAFİ BİLGİ SİSTEMLERİ YARDIMIYLA AFET YÖNETİMİNDE KULLANILABİLİR ŞEKİLDE GÜNCELLENMESİ\n" +
@@ -265,20 +265,20 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     };
 
-    String[] oturum_baskan7 = {
+    private String[] oturum_baskan7 = {
             "SEMRA KÖSE","SEMRA KÖSE","SEMRA KÖSE","SEMRA KÖSE","SEMRA KÖSE",
 
             "İSMAİL GÖKDAYI","İSMAİL GÖKDAYI","İSMAİL GÖKDAYI","İSMAİL GÖKDAYI","İSMAİL GÖKDAYI"
     };
 //for Salon 11
-    String[] txt_title8 ={
+    private String[] txt_title8 ={
             "AÇILIŞ SUNUMLARI","ALİ TOLGA ÖZDEN, MELDA AÇMAZ ÖZDEN (9806)","ŞERİFE BETÜL ÇETİNKAYA, HİLAL ERKUŞ-ÖZTÜRK (9801)", "GİZEM KARACAN (9805)","",
 
              "ÖZGÜR OĞUZ (9401)","AHMET DOĞAN BAYGELDİ, SERPİL GERDAN (9681)","AYLA DEMİRAL, AYFER OLCAY (9712)","SİBEL ÇELİKEL YİĞİTER (9857)","İMRAN ASLAN (9983)"
 
     };
 
-    String[] txt_konu8 ={
+    private String[] txt_konu8 ={
             "","DİRENÇLİ YAPILI ÇEVRE ÜRETİMİNDE SOSYO-MEKANSAL VE SOSYO-KÜLTÜREL ÖZELLİKLERİN ÖNEMİ: AYVACIK-ÇANAKKALE ÖRNEĞİ\n" +
             "IMPORTANCE OF SOCİO-SPATİAL AND SOCİO-CULTURAL CHARACTERİSTİCS İN PRODUCTİON OF RESİLİENT BUİLT ENVİRONMENT: AYVACIK-ÇANAKKALE EXAMPLE",
             "TARIM POLİTİKALARINDA DİRENÇLİLİK: KALKINMA PLANLARI ÜZERİNDEN BİR İNCELEME\n" +
@@ -299,13 +299,13 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                     "INVESTIGATION OF OCCUPATIONAL HEALTH AND SAFETY LEVEL OF TEACHERS IN BİNGÖL PROVINCE"
     };
 
-    String[] oturum_baskan8 = {
+    private String[] oturum_baskan8 = {
             "ALİ TOLGA ÖZDEN","ALİ TOLGA ÖZDEN","ALİ TOLGA ÖZDEN","ALİ TOLGA ÖZDEN","ALİ TOLGA ÖZDEN",
 
             "SİBEL ÇELİKEL YİĞİTER","SİBEL ÇELİKEL YİĞİTER","SİBEL ÇELİKEL YİĞİTER","SİBEL ÇELİKEL YİĞİTER","SİBEL ÇELİKEL YİĞİTER"
     };
 //for Salon 12
-    String[] txt_title9 ={
+    private String[] txt_title9 ={
             "AÇILIŞ SUNUMLARI","EREN BALABAN, ALES SMEJDA, MEHMET İNANC ONUR (9308)","HÜSEYİN BAYRAKTAR, ELİF SAHTİYANCI, ALİ KURU, BURCU YILMAZ BAYRAKTAR (9480",
             "ASHFAQUE AHMED SOOMRO (9481)","AİSHA AL.OMAR (9888)",
 
@@ -313,7 +313,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
     };
 
-    String[] txt_konu9 ={
+    private String[] txt_konu9 ={
             "","FARKLİ DOLGU MALZEMESİNE SAHİP DONATİLİ ISTİNAD DUVARLARİNİN PERFORMANSLARİNİN DEGERLENDİRİLMESİ\n" +
             "PERFORMANCE ANALYSİS OF REİNFORCED EARTH WALLS WİTH DİFFERENT SOİLS",
             "OKULLARDA YAPISAL OLMAYAN ELEMANLARIN AFET KAYNAKLI OLASI RİSKLERİNİN L TİPİ MATRİS YÖNTEMİYLE BELİRLENMESİ\n" +
@@ -326,10 +326,41 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             "","","","",""
     };
 
-    String[] oturum_baskan9 = {
+    private String[] oturum_baskan9 = {
             "MEHMET İNANÇ ONUR","MEHMET İNANÇ ONUR","MEHMET İNANÇ ONUR","MEHMET İNANÇ ONUR","MEHMET İNANÇ ONUR",
 
             "","","","",""
+    };
+//for Salon 4
+//for Salon 12
+    private String[] txt_title14 ={
+        "","","","","",
+
+        "ALİ EKŞİ (9464)","FAHRİ ÇAKI, ALPER UZUN, BARIŞ ŞENTUNA (9981)","ERDİNÇ GÜNAY (9704)","",""
+
+
+
+    };
+
+    private String[] txt_konu14 ={
+            "","","","","",
+
+            "YIKICILIK VE OLASILIĞI ARTAN AFET RİSKLERİNİN TOPLUMSAL YAPI ÜZERİNE ETKİLERİ\n" +
+                    "EFFECTS OF MORE DESTRUCTİVE AND PROBABLE DİSASTER RİSKS ON SOCİAL STRUCTURE",
+            "HANEHALKLARI DÜZEYİNDE DOĞAL AFET FARKINDALIĞI VE HAZIRBULUNUŞLUK: BALIKESİR ÖRNEK OLAY İNCELEMESİ\n" +
+                    "NATURAL DISASTER AWARENESS AND PREPAREDNESS AT THE HOUSEHOLDS LEVEL: BALIKESIR CASE STUDY\n",
+            "ÜLKEMİZDE AFET RİSKLERİNİN AZALTILMASI İÇİN ÖNCEDEN HAZIRLIK\n" +
+                    "PREVIOUS PREPARATION FOR REDUCTION OF DISASTER RISKS IN OUR COUNTRY",
+            "",""
+
+
+    };
+
+    private String[] oturum_baskan14 = {
+            "","","","","",
+
+            "ALİ EKŞİ","ALİ EKŞİ","ALİ EKŞİ","",""
+
     };
 
 
@@ -350,6 +381,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         btn7 = inflate.findViewById(R.id.btn7);
         btn8 = inflate.findViewById(R.id.btn8);
         btn9 = inflate.findViewById(R.id.btn9);
+        btn14 = inflate.findViewById(R.id.btn14); //Salon4
         title = inflate.findViewById(R.id.title_salon);
 
         btn1.setOnClickListener(this);
@@ -361,6 +393,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         btn7.setOnClickListener(this);
         btn8.setOnClickListener(this);
         btn9.setOnClickListener(this);
+        btn14.setOnClickListener(this);
 
         Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title,oturum_baskan);
         listView = inflate.findViewById(R.id.list_tab1);
@@ -383,6 +416,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -443,6 +482,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -504,6 +549,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -565,6 +616,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -626,6 +683,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -687,6 +750,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -748,6 +817,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -809,6 +884,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -870,6 +951,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -931,6 +1018,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
                         go_details.putExtra("baskan",oturum_baskan[position]);
+                    }else if(clilcked_btn.equals("Salon 4")){
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers", txt_title14[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu14[position]);
+                        go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
@@ -1093,6 +1186,17 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 Tab1Adapter tab1Adapter12 = new Tab1Adapter(getActivity(),txt_clock,txt_title9,oturum_baskan9);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter12);
+
+                break;
+
+            case R.id.btn14:
+                //Salon 4
+                title.setText(R.string.salon4);
+                clilcked_btn = getString(R.string.salon4);
+
+                Tab1Adapter tab1Adapter14 = new Tab1Adapter(getActivity(),txt_clock,txt_title14,oturum_baskan14);
+                listView = inflate.findViewById(R.id.list_tab1);
+                listView.setAdapter(tab1Adapter14);
 
                 break;
         }

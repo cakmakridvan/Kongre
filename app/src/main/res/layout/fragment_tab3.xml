@@ -1,14 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.Tab3">
+    tools:context=".fragment.Tab3"
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        >
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/innerLay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_1"
+                android:text="@string/salon3"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_14"
+                android:text="@string/salon4"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_2"
+                android:text="@string/salon5"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_3"
+                android:text="@string/salon6"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_4"
+                android:text="@string/salon7"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_5"
+                android:text="@string/salon8"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_6"
+                android:text="@string/salon9"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_7"
+                android:text="@string/salon10"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_8"
+                android:text="@string/salon11"
+                android:background="@drawable/button_background_selector"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3_9"
+                android:text="@string/salon12"
+                android:background="@drawable/button_background_selector"
+                />
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="......"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:id="@+id/title3_salon"
+        />
+
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_tab3"
+        android:layout_margin="20dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        />
+
+</LinearLayout>
