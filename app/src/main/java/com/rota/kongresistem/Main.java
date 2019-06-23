@@ -14,7 +14,9 @@ import android.widget.Toast;
 import com.rota.kongresistem.activity.About;
 import com.rota.kongresistem.activity.BildiriBilgileri;
 import com.rota.kongresistem.activity.EtkinlikBilgileri;
+import com.rota.kongresistem.activity.KatilimciBilgilendirme;
 import com.rota.kongresistem.activity.Program;
+import com.rota.kongresistem.activity.SergiFirmalari;
 import com.rota.kongresistem.activity.SummarySending;
 import com.rota.kongresistem.adapter.BildiriAdapter;
 import com.rota.kongresistem.login.Login;
@@ -124,7 +126,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btn_exhibition:
 
-                Toast.makeText(Main.this,"Yakında eklenecektir..",Toast.LENGTH_SHORT).show();
+                Intent go_sergi_firmalari = new Intent(Main.this,SergiFirmalari.class);
+                startActivity(go_sergi_firmalari);
 
                 break;
 
@@ -136,8 +139,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btn_user_info:
 
-                Toast.makeText(Main.this,"Yakında eklenecektir..",Toast.LENGTH_SHORT).show();
-
+                Intent go_katilimci_bilgi = new Intent(Main.this,KatilimciBilgilendirme.class);
+                startActivity(go_katilimci_bilgi);
                 break;
 
             case R.id.app_exit:

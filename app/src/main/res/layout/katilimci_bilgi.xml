@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top_katilimci_bilgi"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"  >
+
+        <ImageButton
+            android:id="@+id/back_button_katilimci_bilgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/bac_btn" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title_katilimci_bilgi"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Sunumu gerçekleştirilen bildirilerin Tam Metinleri değerlendirmeye alınarak idrc 2019 Tam Metinler kitabında veya isteğinize göre Resilience Dergisinde makale olarak basılacaktır."
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Kayıt ücreti ödemeyen katılımcıların bildirileri özet kitabına girmeyecek ve sunum yapamayacaklardır. "
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* Kongreye dinleyici olarak katılmak ücretsizdir. Dinleyiciler kayıt haklarından istifade edemeyeceklerdir. ( Yaka kartı, öğle yemekleri, kongre kiti v.b. )"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Kayıt Ücretleri"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/kayit_ucretleri"
+        android:id="@+id/imgView_kayit_ucreti"
+        android:padding="5dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="* Genel Bilgiler (Hakkımızda, Kurullar, Önemli Tarihler,  Konu başlıkları, Kongre yeri, Konaklama olacak http://www.idrcongress.org/ web sitesinde bilgiler mevcut )"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:autoLink="web"
+            />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
