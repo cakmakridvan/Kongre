@@ -40,7 +40,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 
             "MERT HACIEMİROĞLU, BANU AYDIN, CAN ÖZGELDİ (9485)","AHMAD ASWAD, SALAH HAJ ISMAİL, ABDULLAH DİLSİZ (9814)","GÜLÇİN SAĞIR (9452)","BURAK BÜYÜKCİVELEK , SILA CEREN VARIŞ (9828)","",
 
-            "EFNAN ŞORA GÜNAL, UĞUR GÜREL, SERKAN GÜNAL (9729)","LEYLA DERİN, MURAT ERCANOĞLU, NEHİR VAROL (9915)","GİZEM MESTAV SARICA, TSO-CHIEN PAN (9882)","SELMA KOÇ AKGÜL, OĞUZ GÜNDOĞDU, OZDEN IŞIK (9835)","",""
+            "EFNAN ŞORA GÜNAL, UĞUR GÜREL, SERKAN GÜNAL (9729)","LEYLA DERİN, MURAT ERCANOĞLU, NEHİR VAROL (9915)","ALİ EKŞİ (9464)","SELMA KOÇ AKGÜL, OĞUZ GÜNDOĞDU, OZDEN IŞIK (9835)","",""
 
     };
 
@@ -63,8 +63,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 
             "DEPREM KONUMUNUN TAHMİNİ: TÜRKİYE İÇİN BİR VAKA ÇALIŞMASI\n" +
                     "PREDİCTİON OF EARTHQUAKE LOCATİON: A CASE STUDY FOR TURKİYE\n","HEYELAN DUYARLILIK HARİTALARININ OLUŞTURULMASINDA KULLANILAN FARKLI ANALİTİK HİYERARŞİ SÜRECİ (AHP) YÖNTEMLERİ: GENEL BİR DEĞERLENDİRME\n" +
-            "DİFFERENT ANALYTİCAL HİERARCHY PROCESS METHODS (AHP) USED İN LANDSLİDE SUSCEPTİBİLİTY MAP PRODUCTİON: A GENERAL REVİEW","USİNG URBAN GROWTH MODELLİNG TO ESTİMATE THE FUTURE POPULATİON EXPOSURE OF ISTANBUL TO SEİSMİC HAZARD\n" +
-            "KENTSEL MODELLEME YONTEMİ İLE ISTANBUL'UN NUFUS BAZLİ SİSMİK RİSK ANALİZİ","AFET/ RİSK FARKINDALIĞI, YEREL BASIN VE KAMUOYU ESKİŞEHİR, GAZİANTEP VE KOCAELİ ÖRNEĞİ\n" +
+            "DİFFERENT ANALYTİCAL HİERARCHY PROCESS METHODS (AHP) USED İN LANDSLİDE SUSCEPTİBİLİTY MAP PRODUCTİON: A GENERAL REVİEW","Yıkıcılık ve Olasılığı Artan Afet Risklerinin Toplumsal Yapı Üzerine Etkileri Effects of More Destructive and Probable Disaster Risks on Social Structure","AFET/ RİSK FARKINDALIĞI, YEREL BASIN VE KAMUOYU ESKİŞEHİR, GAZİANTEP VE KOCAELİ ÖRNEĞİ\n" +
             "DİSASTER/RİSK AWARENESS, LOCAL PRESS AND PUBLİC OPİNİON SAMPLE OF ESKİŞEHİR, GAZİANTEP, KOCAELİ\n","",""
 
     };
@@ -80,20 +79,19 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 //for Salon 4
     private String[] txt_title14  ={
             "DENİZ ÇAĞLAYAN GÜMÜŞ","ALİ TELLİ, AHMET ALİ ARTUN, NİHAN SEZGİN DOĞRUL, UĞUR TUNCA, ERCÜMENT KÖK (9444)","GÜLHAN ŞEN, AYŞE KARABULUT, TUTKU PEKDAŞ, EBRU KELEŞ (9688)",
-            "ONUR KURT, MUAMMER TÜN, ERKAN KURNAZ, TEZCAN ÇAVUŞOĞLU (9827)","ERKAN KURNAZ, ONUR KURT (9829)","",
+            "ONUR KURT, MUAMMER TÜN, ERKAN KURNAZ, TEZCAN ÇAVUŞOĞLU (9827)","ERKAN KURNAZ, ONUR KURT (9829)","ALİ TELLİ (9525)",
 
-            "AYLİN ÇELİK, MELTEM SENOL BALABAN, SHAGHAYEGH KARİMZADEH, AYSEGUL ASKAN (9898)","HİLMİ EVREN ERDİN, FARANAK KHANMOHAMMADİKOL (9914)","SEVDE DERMAN SIDDIQUI, ÜLKÜ DUMAN YÜKSEL (9917)","ZEYNEP DENİZ YAMAN GALANTİNİ (9632)","",
+            "AYLİN ÇELİK, MELTEM SENOL BALABAN, SHAGHAYEGH KARİMZADEH, AYSEGUL ASKAN (9898)","HİLMİ EVREN ERDİN, FARANAK KHANMOHAMMADİKOL (9914)","HALE MAMUNLU KOCABAŞ (9917)","ZEYNEP DENİZ YAMAN GALANTİNİ (9632)","",
 
-            "ZELİHA ÖZEL, ÖZGE YALÇINER ERCOŞKUN (9648)","CIGDEM COSKUN HEPCAN, SERİF HEPCAN (9653)","UGUR BOZKURT, KORAY VELİBEYOĞLU (9693)","AHMET TÜRK (9796)","",""
+            "SÜLEYMAN TOY, CANSU GÜLLER (9600)","SÜLEYMAN TOY, MURAT TÜRKEŞ (9642)","ZELİHA ÖZEL, ÖZGE YALÇINER ERCOŞKUN (9648)","UGUR BOZKURT, KORAY VELİBEYOĞLU (9693)","",""
     };
 
     private String[] txt_konu14 = {
-            "ENGELLİ VE YAŞLI HİZMETLERİ\n" +
-                    "DISABLED AND ELDERLY SERVICES","\"Z-EVET\" ENGELLİ VERİTABANININ ve ENGELLİ AFET EĞİTİM MODELİ\n" +
+            "Engellilere Yönelik Afet Yönetiminde Erişilebilirligin Önemi The Importance of Accessibility in Disaster Management for People with Disability","\"Z-EVET\" ENGELLİ VERİTABANININ ve ENGELLİ AFET EĞİTİM MODELİ\n" +
             "\"Z-YES\" AF DISABLED DATABASE AND DISABLED DISASTER TRAINING MODEL","EĞİTMENLERİN AFETLERDE ENGELLİ BİREYLERE NASIL DAVRANACAĞI KONUSUNDA Kİ FARKINDALIK DÜZEYLERİNİN BELİRLENMESİ\n" +
             "DETERMİNİNG THE LEVEL OF AWARENESS OF TRAİNERS ABOUT HOW BEHAVE TO PEOPLE WİTH DİSABİLİTİES İN DİSASTERS\n","ÖZEL GEREKSİNİMLİ BİREYLER DEPREME HAZIR MI? TÜRKİYE İÇİN BİR DURUM VE GEREKSİNİM TESPİT ÇALIŞMASI\n" +
             "ARE THE INDIVIDUALS WITH SPECIAL NEEDS READY FOR EARTHQUAKES? A SİTUATİON AND NEEDS ASSESSMENT STUDY FOR TURKEY","AFETLERDE ÖZEL GEREKSİNİMLİ BİREYLERE İLİŞKİN ULUSLARARASI DENEYİMLER\n" +
-            "CRISIS MANAGEMENT FOR INDIVIDUALS WITH SPECIAL NEEDS IN DISASTERS AND EMERGENCIES: INTERNATIONAL EXPERIENCES","",
+            "CRISIS MANAGEMENT FOR INDIVIDUALS WITH SPECIAL NEEDS IN DISASTERS AND EMERGENCIES: INTERNATIONAL EXPERIENCES","AFETLERE HAZIRLIKTA “GÖNÜLLÜ İNSAN KAYNAKLARI ORGANİZASYONU”, MARŞ MİRA(BARIŞ YOLU) UYGULAMA ÖRNEĞİ ORGANIZATION OF VOLUNTEER HUMAN RESOURCES IN PREPARATION FOR DISASTERS, MARŞ MİRA (PEACE ROAD) APPLICATION EXAMPLE",
 
             "ZEMİN HAREKETİ SİMÜLASYONLARI KULLANIMIYLA ERZİNCAN ŞEHRİNİN GEÇMİŞ VE GELECEK KENTSEL RİSKLERİN DEĞERLENDİRMESİ\n" +
                     "EVALUATION OF HISTORICAL AND FUTURE URBAN RISKS OF ERZİNCAN CITY BY USING GROUND MOTION SIMULATION\n","TARİHİ KENT MERKEZLERİNİN AFET VE ACİL DURUMLARDAKİ RİSKLERİNİN ERİŞİLEBİLİRLİK VE GÜVENLİK KRİTERLERİ AÇISINDAN İRDELENMESİ\n" +
@@ -101,11 +99,11 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "EVALUATION OF FLOOD RISK IN CONTEXT OF SPATIAL PLANNING AND MANAGEMENT APPROACHES IN ISTANBUL","DAYANIKLILIĞIN (DİRENÇLİLİĞİN) KÖKENİ, PERKSPEKTİFLERİ VE NİTELİKLERİ ÜZERİNDEN KAVRAMSAL DEĞERLENDİRMESİ: “RESILEMENT”’DAN KENTSEL DAYANIKLILIĞA\n" +
             "CONCEPTUAL ASSESSMENT OF RESILIENCE THROUGH ITS ORIGINS, PERSPECTIVES AND ATTRIBUTES: FROM “RESILEMENT” TO URBAN RESILIENCE\n","",
 
-            "KENTSEL DÖNÜŞÜM STRATEJİ BELGELERİNDE SÜRDÜRÜLEBİLİRLİK DEĞERLENDİRMESİ: KİLİS ÖRNEĞİ\n" +
-                    "SUSTAİNABİLİTY ASSESSMENT İN URBAN TRANSFORMATİON STRATEGY PAPER: KİLİS CASE","DAYANİKLİ KENTLER OLUSTURMADA SUNGER KENT UYGULAMALARİ\n" +
-            "SPONGE CİTY PRACTİCES FOR RESİLİENT CİTİES","DEPREM RİSKİ OLAN ALANLARDA FARKLI KENTSEL DÖNÜŞÜM STRATEJİLERİNİN ETKİNLİK GÖSTERGELERİ\n" +
-            "THE EFFECTİVENESS INDİCATORS OF DİFFERENT URBAN TRANSFORMATİON STRATEGİES İN EARTHQUAKE-PRONE AREAS","DÜNYA’DA UYGULANAN AFET ZARARLARINI AZALTMA YÖNTEMLERİNİN TÜRKİYE’DE UYGULANABİLİRLİĞİ; ISPARTA ÖRNEĞİ\n" +
-            "APPLICABILITY IN TURKEY OF DISASTER METHODS TO REDUCE THE WORLD; ISPARTA EXAMPLE","",""
+            "Kentsel Isı Adası Oluşumuna Yatkınlık Kriterlerinin Belirlenmesi: Erzurum ve Erzincan Örneği Determination of vulnerability criteria for UHI formation: The Case of Erzurum and Erzincan",
+            "Biyoklimatik bilginin mekansal planlama ve kentsel tasarım uygulamalarında kullanımı: Türkiye için iklim değişikliğini dikkate alan öneriler Use of bioclimatological knowledge in spatial planning and urban design practices: suggestions for Turkey considering climate change",
+            "Kentsel Dönüşüm Strateji Belgelerinde Sürdürülebilirlik Değerlendirmesi: Kilis Örneği Sustainability Assessment in Urban Transformation Strategy Paper: Kilis Case",
+            "Deprem Riski Olan Alanlarda Farklı Kentsel Dönüşüm Stratejilerinin Etkinlik Göstergeleri The Effectiveness Indicators of Different Urban Transformation Strategies in Earthquake-Prone Areas",
+            "",""
 
     };
 
@@ -122,9 +120,9 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "FATMA SÜLÜN, DİLEK ÖZTAŞ, AYTUNÇ ATEŞ (9752)\n","SERMET SEZİGEN (9803)\n","SERMET SEZİGEN, RUŞEN KORAY EYİSON, LEVENT KENAR (9804)",
             "İLHAN ÖZTÜRK, ETHEM GÜNEREN, ÖZCAN ERDOĞAN, ALPASLAN MAYADAĞLI (9939)\n","YELİZ ÇATAK, ŞULE ÖZEL, YAPRAK ENGİN ÜSTÜN (10100)","",
 
-            "EZGİ ORHAN, H. ÇAĞATAY KESKİNOK (9717)","AYŞE ÖZYETGİN ALTUN (9754)","AHMET USLU, HASAN BURAK ÖZMEN, ENGİN KORKMAZ, BARIŞ ECER, MÜBERRA KÖK, EMİN ŞAHBAZLI, EMRAH PEKKAN, MUAMMER TÜN (9851)","ALİYE CEREN ONUR (9855)","",
+            "AYŞE ÖZYETGİN ALTUN (9754)","AHMET USLU, HASAN BURAK ÖZMEN, ENGİN KORKMAZ, BARIŞ ECER, MÜBERRA KÖK, EMİN ŞAHBAZLI, EMRAH PEKKAN, MUAMMER TÜN (9851)","ALİYE CEREN ONUR (9855)","ADEM DEMİR (10063)","",
 
-            "FAHRİ ERENEL (9661)","DİDEM GÜNEŞ YILMAZ (9705)","FATİH YAMAN, EVREN AYRANCI, İSMAİL HAKKI HELVACIOĞLU (9820)","","",""
+            "DİDEM GÜNEŞ YILMAZ (9705)","FATİH YAMAN, EVREN AYRANCI, İSMAİL HAKKI HELVACIOĞLU (9820)","CIGDEM COSKUN HEPCAN, SERİF HEPCAN (9653)","AHMET TÜRK (9796)","",""
     };
 
     private String[] txt_konu2 = {
@@ -135,16 +133,17 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "MANAGEMENT OF CHEMİCAL WEAPONS VİCTİMS İN TERMS OF DİSASTER MEDİCİNE","TEHLİKELİ MADDE GÜVENLİĞİNİN KBRN AÇISINDAN ÖNEMİ\n" +
             "IMPORTANCE OF DANGEROUS GOODS SAFETY IN TERMS OF CBRN","",
 
-            "AFET SONRASI HANEHALKLARININ YER SEÇİM KARARLARI VE KENTSEL DİRENÇLİLİK: DEĞİRMENDERE ÖRNEĞİ\n" +
-                    "AFET SONRASI HANEHALKLARININ YER SEÇİM KARARLARI VE KENTSEL DİRENÇLİLİK: DEĞİRMENDERE ÖRNEĞİ\n","AFET RİSK YÖNETİMİ KAPSAMINDA KENT PLANLAMANIN ROLÜ VE İÇERİĞİ\n" +
-            "THE ROLE AND SCOPE OF URBAN PLANNING FOR DISASTER RISK MANAGEMENT","YERLEŞİM YERLERİ İÇİN MEVCUT ACİL TOPLANMA ALANLARININ UYGUNLUĞUNUN COĞRAFİ BİLGİ SİSTEMLERİ (CBS) İLE DEĞERLENDİRİLMESİ: ESKİŞEHİR ÖRNEĞİ\n" +
-            "EVALUATION OF THE SUITABILITY OF THE EMERGENCY ASSEMBLY AREAS FOR THE SETTLEMENTS WITH GEOGRAPHİCAL INFORMATION SYSTEMS (GIS): THE CASE OF ESKİŞEHİR","KENTSEL ALANLARDAKİ TAŞKINLARIN YEŞİL KORİDOR VE DİRENÇLİLİK ÇERÇEVESİNDE İRDELENMESİ- İSTANBUL\n" +
-            "EVALUATİON OF FLOODS İN URBAN AREAS UNDER GREEN CORRİDOR AND RESİLİENCE PERSPECTİVE- ISTANBUL","",
+            "AFET RİSK YÖNETİMİ KAPSAMINDA KENT PLANLAMANIN ROLÜ VE İÇERİĞİ THE ROLE AND SCOPE OF URBAN PLANNING FOR DISASTER RISK MANAGEMENT",
+            "YERLEŞİM YERLERİ İÇİN MEVCUT ACİL TOPLANMA ALANLARININ UYGUNLUĞUNUN COĞRAFİ BİLGİ SİSTEMLERİ (CBS) İLE DEĞERLENDİRİLMESİ: ESKİŞEHİR ÖRNEĞİ EVALUATION OF THE SUITABILITY OF THE EMERGENCY ASSEMBLY AREAS FOR THE SETTLEMENTS WITH GEOGRAPHİCAL INFORMATION SYSTEMS (GIS): THE CASE OF ESKİŞEHİR",
+            "Kentsel Alanlardaki Taşkınların Yeşil Koridor ve Dirençlilik Çerçevesinde İrdelenmesi- İstanbul Evaluation of Floods in Urban Areas Under Green Corridor and Resilience Perspective- Istanbul",
+            "TOPLUMSAL DİRENÇ OLUŞTURMADA TOPLUM MERKEZLERİNİN ROLÜ THE ROLE OF COMMUNITY CENTERS IN SOCIAL RESISTANCE",
+            "",
 
-            "AFET VE ACİL DURUMLAR İÇİN HAZIRLANAN PLANLAR: KARMAŞIKLIK MI? SADELİK VE BASİTLİK Mİ?\n" +
-                    "PLANS PREPARED FOR DİSASTERS AND EMERGENCİES: COMPLEXİTY? SİMPLİCİTY AND SİMPLENESS?","PLANLAMA BAKIŞINDAN BURSA İLİ AFET RİSKİ DEĞERLENDİRMESİ\n" +
-            "AN EVALUATİON OF DİSASTER RİSK OF BURSA FROM THE PLANNİNG PERSPECTİVE","TÜRKİYE AFET VE ACİL DURUM YÖNETİMİ SİSTEMİ İÇİN BİR DEĞERLENDİRME\n" +
-            "EVALUATİON OF TURKİSH DİSASTER AND EMERGENCY MANAGEMENT SYSTEM","","",""
+            "Planlama bakışından Bursa ili afet riski değerlendirmesi An evaluation of disaster risk of Bursa from the planning perspective",
+            "Türkiye Afet ve Acil Durum Yönetimi Sistemi için Bir Değerlendirme Evaluation of Turkish Disaster and Emergency Management System",
+            "Dayanikli Kentler Olusturmada Sunger Kent Uygulamalari Sponge City Practices for Resilient Cities",
+            "DÜNYA’DA UYGULANAN AFET ZARARLARINI AZALTMA YÖNTEMLERİNİN TÜRKİYE’DE UYGULANABİLİRLİĞİ; ISPARTA ÖRNEĞİ APPLICABILITY IN TURKEY OF DISASTER METHODS TO REDUCE THE WORLD; ISPARTA EXAMPLE",
+            "",""
 
     };
 
@@ -159,7 +158,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 //for Salon 6
     private String[] txt_title3  ={
             "ABDÜLKADİR ÇAKIR, HALİS SİPAHİ, HARUN GÜMÜŞ, HASAN TEZCAN, SEYİT AKPANCAR (9908)","ABDÜLKADİR ÇAKIR, ERHAN KURTTEKİN, FEVZİ SEZGİN SEÇKİN, SEYİT AKPANCAR (9910)",
-            "MEHTAP ÖZENEN KAVLAK, ADEM KURTİPEK, SAYE NİHAN ÇABUK (9970)","MÜGE BİRDEN (9772)","ABDOUL AZIZ RAZIKOU DILWANI, ÖMER ÖZGÜR TANRIÖVER (9780)","NUR SİNEM PARTİGÖÇ, ÇİĞDEM TARHAN (9984)",
+            "MEHTAP ÖZENEN KAVLAK, ADEM KURTİPEK, SAYE NİHAN ÇABUK (9970)","ABDOUL AZIZ RAZIKOU DILWANI, ÖMER ÖZGÜR TANRIÖVER (9780)","NUR SİNEM PARTİGÖÇ, ÇİĞDEM TARHAN (9884)","",
 
             "OYA AÇIKALIN, NİLGÜN OKAY, GÜL YÜCEL, EBRU İNAL (9889)","EZGİ DADAŞ, ZEYNEP YEŞİM İLERİSOY (9895)","ELMAS UZUNER, NİLÜFER AKINCITÜRK (9816)","PINAR KISA OVALI, CENK MOTOR (9853)",
             "FIRAT ASLANGİRİ, OYA AÇIKALIN RASHEM (9277)",
@@ -172,15 +171,14 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "KARBONMONOKSİT GAZ SENSÖR TASARIMI VE SABİT TELEFON ARAMALI ALARM SİSTEMİ\n" +
                     "CARBONMONOXİDE GAS SENSOR DESİGN AND ALARM SYSTEM WİTH PHONE CALL","ANDROİD ERİŞİMLİ SOLAR ENERJİ DESTEKLİ ZİRAİ ÖRTÜ SİSTEMİ\n" +
             "ANDROİD ACCESS SOLAR ENERGY SUPPORTED AGRİCULTURAL COVERİNG SYSTEM","KÜTAHYA TÜRKMEN ORMAN İŞLETME ŞEFLİĞİ ORMANLIK ALANLARI İÇİN COĞRAFİ BİLGİ SİSTEMLERİ İLE ORMAN YANGINI TEHLİKE HARİTASI OLUŞTURULMASI\n" +
-            "THE PREPARATION OF FOREST FIRE HAZARD MAPS USING GEOGRAPHICAL INFORMATION SYSTEMS CAPABILITIES FOR TÜRKMEN FOREST MANAGEMENT UNIT - KÜTAHYA","SİBER SALDIRILARA KARŞI ELEKTRİK DAĞITIM ŞİRKETLERİNİN HAZIRLIĞI: BİR İŞ SÜREKLİLİĞİ BAKIŞ AÇISINDAN\n" +
-            "THE PREPAREDNESS OF TURKISH ELECTRICITY DISTRIBUTION FIRMS FOR CYBER ATTACKS: A BUSINESS CONTINUITY PERSPECTIVE","GÜNCEL MAKİNE ÖĞRENMESİ TAHMİN MODELLERİ İLE HASTANEYE YATIŞ VE ACİLİYET SINIFI TAHMİNİ\n" +
-            "EMERGENCY TRİAGE AND HOSPİTALİZATİON PREDİCTİON WİTH STATE OF THE ART MACHİNE LEARNİNG MODELS\n","DİJİTAL ÇAĞDA AFET YÖNETİMİ: DİJİTAL BÖLÜNME PERSPEKTİFİNDEN BİR İNCELEME\n" +
-            "DİSASTER MANAGEMENT İN THE DİGİTAL AGE: A REVİEW FROM DİGİTAL DİVİDE PERSPECTİVE",
+            "THE PREPARATION OF FOREST FIRE HAZARD MAPS USING GEOGRAPHICAL INFORMATION SYSTEMS CAPABILITIES FOR TÜRKMEN FOREST MANAGEMENT UNIT - KÜTAHYA","GÜNCEL MAKİNE ÖĞRENMESİ TAHMİN MODELLERİ İLE HASTANEYE YATIŞ VE ACİLİYET SINIFI TAHMİNİ Emergency triage and hospitalization prediction with state of the art machine learning models",
+            "Dijital Çağda Afet Yönetimi: Dijital Bölünme Perspektifinden Bir İnceleme Disaster Management in the Digital Age: A Review from Digital Divide Perspective",
+            "",
 
             "AFET DİRENÇLİLİĞİ BAKIMINDAN ERİŞİLEBİLİR GEÇİCİ BARINMA\n" +
                     "ACCESSİBLE TEMPORARY SHELTER FOR DİSASTER RESİLİENCE","AFET SONRASI GEÇİCİ BARINMA BİRİMLERİNDE GÜNCEL MİMARİ TASARIM VE YAPIM TEKNOLOJİLERİNİN DEĞERLENDİRİLMESİ\n" +
             "EVALUATION OF CURRENT ARCHITECTURAL DESIGN AND CONSTRUCTION TECHNOLOGIES IN POST-DISASTER SHELTER DESIGNS","DEPREM SONRASI KONUTLARIN YENİDEN PLANLAMA SORUNSALINA BÜTÜNCÜL BİR BAKIŞ: KOCAELİ/ GÖLCÜK ÖRNEĞİ\n" +
-            "AN INTEGRATED VİEW TO RE-PLANNİNG PROBLEM İN HOUSİNG POST-EARTHQUAKE: EXAMPLE OF KOCAELİ/ GÖLCÜK\n","KLİM DEĞİŞİKLİĞİ VE DİRENÇLİLİK: DİRENÇLİ TASARIM İLKELERİ VE YEREL MİMARİ\n" +
+            "AN INTEGRATED VİEW TO RE-PLANNİNG PROBLEM İN HOUSİNG POST-EARTHQUAKE: EXAMPLE OF KOCAELİ/ GÖLCÜK\n","İKLİM DEĞİŞİKLİĞİ VE DİRENÇLİLİK: DİRENÇLİ TASARIM İLKELERİ VE YEREL MİMARİ\n" +
             "CLIMATE CHANGE AND RESILIENCE: PRINCIPLES OF RESILIENT DESIGN AND VERNACULAR ARCHITECTURE","VAN’IN KÖYLERİ 2011 DEPREMLERİNDEN BU YANA DAYANIKLILIK HEDEFİNE NE KADAR YAKLAŞABİLDİLER?\n" +
             "HOW RESILIENT HAVE THE VILLAGES OF VAN BECOME SINCE THE 2011 EARTHQUAKES? THE CASE OF TEN VILLAGES\n",
 
@@ -249,7 +247,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 
             "ÖZGÜR AVŞAR (9100)","SİNEM OKTAY, NİLÜFER TAŞ, MURAT TAŞ (9744)","BİRSEN YÜCESES, C.NAKIŞ KARAMAĞARALI, Z.GEDİZ URAK (9847)","EMRE BECERİR, EMRE KİSHALİ (9860)", "",
 
-            "","","","","",""
+            "BENGÜ AYDIN DİKMEN (9501)","HACI AHMET KIRTAŞ, HÜSEYİN ALTUNDAĞ (9790)","EBRU TEKIN BILBIL (9823)","R.ÖZGÜN KEHYA (9941)","",""
 
 
     };
@@ -269,7 +267,11 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "ASSESMENT OF DOCUMENTATİON PROCESSES OF CASTLES OF TOKAT, İN THE CONTEXT OF ARCHİTECTURAL CONSERVATİON PRİNCİPLES\n","KIRSAL MİRASIN DEĞİŞİM VE DÖNÜŞÜMÜ ÜZERİNE NEVŞEHİR KALE ETRAFI YERLEŞKESİ\n" +
             "CHANGE AND TRANSFORMATİON OF RURAL HERİTAGE NEVŞEHİR CASTLE SURROUNDİNGS","",
 
-            "","","","","",""
+            "Mahalle bostanları, yurttaşlık kültürü ve iklim tehlikelerine dirençlilik: imkân ve kısıtlılıklar\n" + "Community gardens, civic culture and resilience against climate hazards: potentials and limitations",
+            "YANGIN MÜDAHALESİNDE LOJİSTİK LOGİSTİCS İN FİRE RESPONSE",
+            "Resilience ve Belirsizlik: Sosyo-ekoloji ve kentsel ortam/alan Resilience and Uncertainty: Socio-ecologies and urban milieu/space",
+            "AFAD Web Sitesindeki Videoların Afet İletişimi Bağlamında Nicel Analizi Quantitative Analysis of Videos in AFAD Web Site in the Context of Disaster Communication",
+            "",""
     };
 
     private String[] oturum_baskan5 = {
@@ -288,7 +290,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "SALAD ABDLLAHİ, GÖKHAN DEMİR, UTKU KÖKTAN, MUZAFFER KEREM ERTEK (9741)","NURİ YILMAZ, HASAN BOZKURT, YILDIRIM BAYAZIT (9757)","GÖKHAN DEMİR, ÖMER FATİH YAZICI, MUZAFFER KEREM ERTEK, UTKU KÖKTAN (9742)",
             "RUSTAM QAZIZADA, GÖKHAN DEMİR, UTKU KÖKTAN, MUZAFFER KEREM ERTEK (9937)","",
 
-            "BENGÜ AYDIN DİKMEN (9501)","HACI AHMET KIRTAŞ, HÜSEYİN ALTUNDAĞ (9790)","EBRU TEKIN BILBIL (9823)","R.ÖZGÜN KEHYA (9941)","",""
+            "","","","","",""
     };
 
     private String[] txt_konu6 = {
@@ -304,11 +306,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "EXAMINATION OF EARTHQUAKE EFFECTS ON THE SLOPE STABILITY BY FINITE ELEMENT METHOD: KARABÜK/YENİCE EXAMPLE","RÜZGAR TÜRBİN TEMELİNİN DİNAMİK YÜKLER ALTINDAKİ DAVRANIŞININ İNCELENMESİ\n" +
             "INVESTIGATION OF THE BEHAVIOUR OF WIND TURBINE FOUNDATION UNDER SEISMIC LOADS","",
 
-            "MAHALLE BOSTANLARI, YURTTAŞLIK KÜLTÜRÜ VE İKLİM TEHLİKELERİNE DİRENÇLİLİK: İMKÂN VE KISITLILIKLAR\n" +
-                    "COMMUNİTY GARDENS, CİVİC CULTURE AND RESİLİENCE AGAİNST CLİMATE HAZARDS: POTENTİALS AND LİMİTATİONS","YANGIN MÜDAHALESİNDE LOJİSTİK\n" +
-            "LOGİSTİCS İN FİRE RESPONSE","RESİLİENCE VE BELİRSİZLİK: SOSYO-EKOLOJİ VE KENTSEL ORTAM/ALAN\n" +
-            "RESİLİENCE AND UNCERTAİNTY: SOCİO-ECOLOGİES AND URBAN MİLİEU/SPACE","AFAD WEB SİTESİNDEKİ VİDEOLARIN AFET İLETİŞİMİ BAĞLAMINDA NİCEL ANALİZİ\n" +
-            "QUANTİTATİVE ANALYSİS OF VİDEOS İN AFAD WEB SİTE İN THE CONTEXT OF DİSASTER COMMUNİCATİON","",""
+            "","","","","",""
     };
 
     private String[] oturum_baskan6 = {
@@ -322,9 +320,9 @@ public class Tab3 extends Fragment implements View.OnClickListener {
 //for Salon 10
     private String[] txt_title7  ={
             "CENGİZ İPEK (9520)","AHMET ÖZDEMİR, SERPİL GERDAN (9825)","ERTAN TURGU, ALİ ÜMRAN KÖMÜŞÇÜ, YUSUF ZİYA YAVUZ, BAHATTİN AYDIN (9854)","UMUT PEKİN TİMUR, ÖZGÜR BURHAN TİMUR, SAİD HASSAN MAHAMAD (9919)",
-            "EYÜP ÇATLI, SERPİL GERDAN (10121)","",
+            "EYÜP ÇATLI, SERPİL GERDAN (10121)","ALİ EKŞİ (9463)",
 
-            "CAFER YILDIRIM (9279)","SEZGÜL ŞAHİN (9856)","DENİZ KARABALIK (9858)","","",
+            "CAFER YILDIRIM (9279)","DENİZ KARABALIK (9858)","İSMAİL TALİH GÜVEN, DENİZ GERÇEK KURT (10192)","","",
 
             "","","","","",""
     };
@@ -335,12 +333,12 @@ public class Tab3 extends Fragment implements View.OnClickListener {
             "NATIONAL GARDENS CONVERTIBLED AS ASSEMBLY POINT AFTER DISASTER","AFETLERE BİR DİRENÇLİLİK ÖRNEĞİ: MERSİN İLİ TARSUS İLÇESİNDE 04 OCAK 2018 TARİHİNDE MEYDANA GELEN ANİ TAŞKININ FFGS ÜRÜNLERİ İLE ANALİZİ\n" +
             "AN EXAMPLE OF RESISTANCE TO DISASTERS:ANALYSİS OF FLASH FLOOD USİNG FFGS PRODUCTS ON 04 JAN 2018 İN TARSUS\n","TAŞKIN KORUMADA YEŞİL YOLLARIN ÖNEMİNİN DEĞERLENDİRİLMESİ\n" +
             "EVALUATİON OF THE IMPORTANCE OF GREENWAYS İN FLOOD PROTECTİON","PRES MAKİNALARININ KURULUM RİSKLERİNİN İŞ GÜVENLİĞİ AÇISINDAN DEĞERLENDİRİLMESİ\n" +
-            "EVALUATION OF INSTALLATION RISKS OF PRESS MACHINES IN TERMS OF WORK SAFETY","",
+            "EVALUATION OF INSTALLATION RISKS OF PRESS MACHINES IN TERMS OF WORK SAFETY","Üniversite Öğrencilerinde Afetlere Karşı Bireysel Direnci Etkileyen Faktörlerin Değerlendirilmesi Evaluation of Factors Affecting Individual Resistance to Disasters in University Students",
 
             "AFET VE ACİL DURUMLARDA İLAÇ RİSK YÖNETİMİ\n" +
-                    "DRUG RİSK MANAGEMENT İN DİSASTER AND EMERGENCY CASES\n","KALORİ KISITLAMANIN SAĞLIKLI YAŞLANMA ÜZERİNE ETKİLERİ\n" +
-            "THE EFFECTS OF CALORİE RESTRİCTİON ON HEALTHY AGİNG\n","AFETLERDE KRONİK HASTALIKLAR VE BESLENME\n" +
-            "CHRONIC DISEASES AND NUTRITION IN DISASTERS","","",
+                    "DRUG RİSK MANAGEMENT İN DİSASTER AND EMERGENCY CASES\n","AFETLERDE KRONİK HASTALIKLAR VE BESLENME CHRONIC DISEASES AND NUTRITION IN DISASTERS",
+            "İZMİT KENTİNDE KONUT STOKUNUN DEPREME KARŞI ‘ALGILANAN RİSK’İ VE YERBİLİMLERİ RİSK VERİSİNİN KARŞILAŞTIRMASI COMPARİSON OF ‘PERCEİVED RİSK’ OF HOUSİNG STOCK AGAİNST EARTHQUAKE AND THE EARTHQUAKE RİSK FROM EARHTSCİENCES DATA İN İZMİT CİTY",
+            "","",
 
             "","","","","",""
     };
@@ -355,8 +353,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
     };
 //for Salon 11
     private String[] txt_title8  ={
-            "ALİ TELLİ (9525)","ALİ TOPAL, MUHİTTİN DEMİRKASIMOĞLU (9695)","İLKNUR MAYA, MUSTAFA GÖKBAYRAK (9713)","RABİA DAĞDAŞ (9716)","EMİNE AKTAŞ, EMRAH GÜNEY, MESUT KAZAN, TÜLİN ÇEVİKEL, SEVAL KOLDAŞ, MEHMET İBRAHİM TUĞLU (9783)",
-            "SEVDA DEMİRÖZ YILDIRIM (9879)",
+            "ALİ TOPAL, MUHİTTİN DEMİRKASIMOĞLU (9695)","İLKNUR MAYA, MUSTAFA GÖKBAYRAK (9713)","RABİA DAĞDAŞ (9716)","EMİNE AKTAŞ, Emrah GÜNEY, Mesut KAZAN, Tülin ÇEVİKEL, Seval KOLDAŞ, Mehmet İbrahim TUĞLU (9783)","", "",
 
             "BÜŞRA GİZEM YILMAZ (9510)","ALPER BODUR (9682)","FADİ ORFALİ, ABDULLAH DİLSİZ, SALAH HAJ ISMAIL (9747)","","",
 
@@ -364,15 +361,11 @@ public class Tab3 extends Fragment implements View.OnClickListener {
     };
 
     private String[] txt_konu8 = {
-            "AFETLERE HAZIRLIKTA “GÖNÜLLÜ İNSAN KAYNAKLARI ORGANİZASYONU”, MARŞ MİRA(BARIŞ YOLU) UYGULAMA ÖRNEĞİ\n" +
-                    "ORGANIZATION OF VOLUNTEER HUMAN RESOURCES IN PREPARATION FOR DISASTERS, MARŞ MİRA (PEACE ROAD) APPLICATION EXAMPLE","T.C. SAĞLIK BAKANLIĞI ULUSAL MEDİKAL KURTARMA EKİBİ (UMKE) ÇALIŞANLARINDA ALGILANAN STRES DÜZEYLERİ ÜZERİNDE OTANTİK LİDERLİK DAVRANIŞLARI\n" +
-            "ETKİSİNİN İNCELENMESİ: İSTANBUL İLİ ÖRNEĞİ\n" +
-            "EXAMINING THE EFFECT OF AUTHENTIC LEADERSHIP BEHAVIORS ON PERCEIVED STRESS LEVELS IN NATIONAL MEDICAL RESCUE TEAM (UMKE)\n" +
-            "WORKERS IN THE MINISTRY OF HEALTH: EXAMPLE OF İSTANBUL\n","AFETLERE DİRENÇLİLİKTE EDİRNE 112 ÇALIŞANLARININ AFET HAZIRLIKLARI VE AFET BİLİNÇ DÜZEYLERİ\n" +
-            "DISASTER PREPAREDNESS DİRENÇLİLİKTE EDİRNE 112 HEALTH WORKERS DISASTER PREPARATION AND DISASTER AWARENESS LEVELS\n","AFETLER SIRASINDA HASTA VE YARALILARA MÜDAHALEDE SIĞINAK GÖREVİ YAPAN YER ALTI HASTANELERİNE GENEL BİR BAKIŞ\n" +
-            "A GENERAL OVERWİEW OF UNDERGROUND HOSPİTALS ACTİNG AS SHELTER İN İNTERVENTİON TO PATİENTS AND WOUNDED DURİNG DİSASTERS","AFETİN SAĞLIK KAHRAMANLARI, ULUSAL MEDİKAL KURTARMA EKİBİ; MANİSA UMKE AFET DENEYİMLERİ\n" +
-            "DISASTER HEALTH HEROES, NATIONAL MEDICAL RESCUE TEAM; MANISA UMKE DISASTER EXPERIENCES","HASTANE ÖNCESİ ACİL SAĞLIK HİZMETLERİNDE OLAY YERİ TRİAJ YÖNETİMİ\n" +
-            "FİELD TRİAGE MANAGEMENT İN PREHOSPİTAL EMERGENCY HEALTH SERVİCES",
+            "T.C. SAĞLIK BAKANLIĞI ULUSAL MEDİKAL KURTARMA EKİBİ (UMKE) ÇALIŞANLARINDA ALGILANAN STRES DÜZEYLERİ ÜZERİNDE OTANTİK LİDERLİK DAVRANIŞLARI ETKİSİNİN İNCELENMESİ: İSTANBUL İLİ ÖRNEĞİ EXAMINING THE EFFECT OF AUTHENTIC LEADERSHIP BEHAVIORS ON PERCEIVED STRESS LEVELS IN NATIONAL MEDICAL RESCUE TEAM (UMKE) WORKERS IN THE MINISTRY OF HEALTH: EXAMPLE OF İSTANBUL",
+            "AFETLERE DİRENÇLİLİKTE EDİRNE 112 ÇALIŞANLARININ AFET HAZIRLIKLARI VE AFET BİLİNÇ DÜZEYLERİ DISASTER PREPAREDNESS DİRENÇLİLİKTE EDİRNE 112 HEALTH WORKERS DISASTER PREPARATION and DISASTER AWARENESS LEVELS",
+            "Afetler Sırasında Hasta ve Yaralılara Müdahalede Sığınak Görevi Yapan Yer Altı Hastanelerine Genel Bir Bakış A General Overwiew of Underground Hospitals Acting as Shelter in İntervention to Patients and Wounded During Disasters",
+            "AFETİN SAĞLIK KAHRAMANLARI, ULUSAL MEDİKAL KURTARMA EKİBİ; MANİSA UMKE AFET DENEYİMLERİ\n" + "DISASTER HEALTH HEROES, NATIONAL MEDICAL RESCUE TEAM; MANISA UMKE DISASTER EXPERIENCES",
+            "","",
 
             "OYUN PARKINDAN KENT PARKINA:SENGEL FİKİR PROJESİ\n" +
                     "FROM THE PLAYGROUND TO THE PUBLİC PARK: SENGEL IDEA PROJECT","TÜRKİYE’DE MİMARLIK VE İÇ MİMARLIK ÖĞRETİMİNDE YANGIN GÜVENLİĞİNİN YERİ\n" +
@@ -392,7 +385,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
     };
 //for Salon 12
     private String[] txt_title9  ={
-            "KURTULUŞ KARAKUŞ, İMRAN ASLAN (9406)","İMRAN ASLAN, YASİN ÇELİK (9491)","BERKAY ÖZKAY, SÜHEYLA YEREL KANDEMİR, EMİN AÇIKKALP (9574)","BURAK YAPRAK, SELİM YAZICI (9913)","","",
+            "BERKAY ÖZKAY, SÜHEYLA YEREL KANDEMİR, EMİN AÇIKKALP (9574)","BURAK YAPRAK, SELİM YAZICI (9913)","BURAK YAPRAK, SELİM YAZICI (9906)","","","",
 
             "ZEYNEP FİKRAN YENİCE (9497)","ABDELHAMED BARANI (9620)","AYLİN SENTURK (9755)","VESİLE ÖZEN, ŞERİFE BETÜL ÇETİNKAYA (9808)","",
 
@@ -400,11 +393,10 @@ public class Tab3 extends Fragment implements View.OnClickListener {
     };
 
     private String[] txt_konu9 = {
-            "ARICILIK İŞLETMELERİNDE İŞ SAĞLIĞI VE GÜVENLİĞİ: BİNGÖL ÖRNEĞİ\n" +
-                    "OCCUPATIONAL HEALTH AND SAFETY IN BEEKEEPING ENTERPRICES: BİNGÖL EXAMPLE","ELEKTRİK KAZALARIN İŞ SAĞLIĞI VE GÜVENLİĞİNİ YÖNÜNDEN İNCELENMESİ\n" +
-            "INVESTIGATION OF ELECTRIC ACCIDENTS IN OCCUPATIONAL HEALTH AND SAFETY","TÜRKİYE’DE MADEN SEKTÖRÜNDEKİ İŞ KAZALARININ İNCELENMESİ\n" +
-            "INVESTIGATION OF WORK ACCIDENTS IN MINING SECTOR IN TURKEY","ORGANİZASYON TEORİLERİ PERSPEKTİFİNDEN İŞ SÜREKLİLİĞİ YÖNETİMİ\n" +
-            "BUSİNESS CONTİNUİTY MANAGEMENT FROM AN ORGANİZATİONAL THEORY PERSPECTİVE","","",
+            "TÜRKİYE’DE MADEN SEKTÖRÜNDEKİ İŞ KAZALARININ İNCELENMESİ INVESTIGATION OF WORK ACCIDENTS IN MINING SECTOR IN TURKEY",
+            "ORGANİZASYON TEORİLERİ PERSPEKTİFİNDEN İŞ SÜREKLİLİĞİ YÖNETİMİ Business Continuity Management from An Organizational Theory Perspective",
+            "Türkiye’deki KOBİ’lerin İş Sürekliliği Yönetimi Konusundaki Farkındalık Düzeylerinin Belirlenmesi Determining the Level of Business Continuity Management Awareness of SMEs in Turkey",
+            "","","",
 
             "TÜRKİYE’DE KIŞ TURİZMİ MERKEZLERİNİN İKLİM DEĞİŞİKLİĞİNE DAYANIKLILIĞININ DEĞERLENDİRİLMESİ, BOLU KÖROĞLU DAĞI VE ERZURUM PALANDÖKEN ÖRNEKLERİ\n" +
                     "CLİMATE CHANGE RESILIENCE ASSESMENT OF WINTER TOURISM CENTERS IN TURKEY: BOLU KÖROĞLU AND ERZURUM PALANDÖKEN\n","SAVAŞ ALTINDAKİ KENTİN KIRILGANLIKLARI VE DİRENÇLİLİK STRATEJİLERİ: BENGAZİ KENTİNDE BİR VAKA ÇALIŞMASI\n" +
@@ -452,7 +444,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
         btn11.setOnClickListener(this);
         btn12.setOnClickListener(this);
 
-        Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title,oturum_baskan);
+        Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title);
         listView = inflate.findViewById(R.id.list_tab3);
         listView.setAdapter(tab1Adapter);
 
@@ -1604,7 +1596,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(getString(R.string.salon3));
                 clilcked_btn = getString(R.string.salon3);
 
-                Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title,oturum_baskan);
+                Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter);
 
@@ -1615,7 +1607,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon5);
                 clilcked_btn = getString(R.string.salon5);
 
-                Tab1Adapter tab1Adapter2 = new Tab1Adapter(getActivity(),txt_clock,txt_title2,oturum_baskan2);
+                Tab1Adapter tab1Adapter2 = new Tab1Adapter(getActivity(),txt_clock,txt_title2);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter2);
 
@@ -1626,7 +1618,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon6);
                 clilcked_btn = getString(R.string.salon6);
 
-                Tab1Adapter tab1Adapter3 = new Tab1Adapter(getActivity(),txt_clock,txt_title3,oturum_baskan3);
+                Tab1Adapter tab1Adapter3 = new Tab1Adapter(getActivity(),txt_clock,txt_title3);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter3);
 
@@ -1637,7 +1629,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon7);
                 clilcked_btn = getString(R.string.salon7);
 
-                Tab1Adapter tab1Adapter7 = new Tab1Adapter(getActivity(),txt_clock,txt_title4,oturum_baskan4);
+                Tab1Adapter tab1Adapter7 = new Tab1Adapter(getActivity(),txt_clock,txt_title4);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter7);
 
@@ -1648,7 +1640,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon8);
                 clilcked_btn = getString(R.string.salon8);
 
-                Tab1Adapter tab1Adapter8 = new Tab1Adapter(getActivity(),txt_clock,txt_title5,oturum_baskan5);
+                Tab1Adapter tab1Adapter8 = new Tab1Adapter(getActivity(),txt_clock,txt_title5);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter8);
 
@@ -1659,7 +1651,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon9);
                 clilcked_btn = getString(R.string.salon9);
 
-                Tab1Adapter tab1Adapter9 = new Tab1Adapter(getActivity(),txt_clock,txt_title6,oturum_baskan6);
+                Tab1Adapter tab1Adapter9 = new Tab1Adapter(getActivity(),txt_clock,txt_title6);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter9);
 
@@ -1670,7 +1662,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon10);
                 clilcked_btn = getString(R.string.salon10);
 
-                Tab1Adapter tab1Adapter10 = new Tab1Adapter(getActivity(),txt_clock,txt_title7,oturum_baskan7);
+                Tab1Adapter tab1Adapter10 = new Tab1Adapter(getActivity(),txt_clock,txt_title7);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter10);
 
@@ -1681,7 +1673,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon11);
                 clilcked_btn = getString(R.string.salon11);
 
-                Tab1Adapter tab1Adapter11 = new Tab1Adapter(getActivity(),txt_clock,txt_title8,oturum_baskan8);
+                Tab1Adapter tab1Adapter11 = new Tab1Adapter(getActivity(),txt_clock,txt_title8);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter11);
 
@@ -1692,7 +1684,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon12);
                 clilcked_btn = getString(R.string.salon12);
 
-                Tab1Adapter tab1Adapter12 = new Tab1Adapter(getActivity(),txt_clock,txt_title9,oturum_baskan9);
+                Tab1Adapter tab1Adapter12 = new Tab1Adapter(getActivity(),txt_clock,txt_title9);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter12);
 
@@ -1703,7 +1695,7 @@ public class Tab3 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon4);
                 clilcked_btn = getString(R.string.salon4);
 
-                Tab1Adapter tab1Adapter14 = new Tab1Adapter(getActivity(),txt_clock,txt_title14,oturum_baskan14);
+                Tab1Adapter tab1Adapter14 = new Tab1Adapter(getActivity(),txt_clock,txt_title14);
                 listView = inflate.findViewById(R.id.list_tab3);
                 listView.setAdapter(tab1Adapter14);
 

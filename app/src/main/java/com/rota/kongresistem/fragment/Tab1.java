@@ -24,10 +24,35 @@ import com.rota.kongresistem.adapter.Tab1Adapter;
 public class Tab1 extends Fragment implements View.OnClickListener {
 
     private ListView listView;
-    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn14;
+    private Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn14,button2;
     View inflate;
     private TextView title;
     private String clilcked_btn = "";
+
+    //for Salon 2
+    private String[] txt_title_btn2  ={
+            "AÇILIŞ SUNUMLARI","ŞÜKRÜ ERSOY, ÖZCAN ERDOĞAN, FİLİZ KATMAN, SERHAT YILMAZ (9731)",
+            "REZA SABER, VEYSEL IŞIK, AYŞE ÇAĞLAYAN (9897)","EFNAN ŞORA GÜNAL, UĞUR GÜREL (9907)",
+            "ŞENER CERYAN (9959)",
+
+            "","","","",""
+
+    };
+
+    private String[] txt_konu_btn2 = {"","İNSANOĞLUNU BEKLEYEN TEHLİKELER\n" +
+            "HAZARDS FOR HUMANKIND","ARAS FAY ZONU BOYUNCA (KB İRAN) MORFOMETRİK VE INSAR VERİ ANALİZİYLE DOĞAL AFET RİSKLERİNİN BELİRLENMESİ\n" +
+            "DETERMİNATİON OF NATURAL DİSASTER RİSKS ALONG ARAS FAULT ZONE (NW IRAN) USİNG MORPHOMETRİC AND INSAR DATA ANALYSİS\n","YERALTI MADENLERİNDE SİSMİK AKTİVİTELERİN TAHMİNİ İÇİN ÖZNİTELİKLERİN ANALİZİ\n" +
+            "ANALYSİS OF FEATURES FOR PREDİCTİON OF SEİSMİC ACTİVİTİES İN UNDERGROUND MİNES\n","ALTINOLUK-GÜRE (BALIKESİR) YERLEŞİM ALANININ SIVILAŞMA ŞİDETİ VE FAYLARDAN UZAKLIĞIN BİRLİKTE KULLANILARAK MİKRO-BÖLGELENDİRİLMESİ\n" +
+            "THE MİCROZONATİON OF THE SETTLEMENT AREA OF ALTINOLUK-GÜRE (BALIKESİR) USİNG THE LİQUEFACTİON SEVERİTY INDEX AND DİSTANCE FROM FAULTS TOGETHER",
+
+            "","","","",""
+
+    };
+
+    private String[] oturum_baskan_btn2 = {
+            "ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY","ŞÜKRÜ ERSOY",
+            "HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU","HİKMET EROĞLU"
+    };
 //for Salon 3
     private String[] txt_clock ={
             "10:00-10:40",
@@ -74,7 +99,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     };
 
     private String[] txt_title2 ={
-            "AÇILIŞ SUNUMLARI","YUSUF ZAHİT GÜNDOĞDU, GÖRKEM İÇÖZ, YASİN ARSLAN (9473)","HÜSEYİN MUNGAN, DİLEK CANSU BOZACIOĞLU, AYŞE BENGÜ SÜNBÜL, ÖMER FARUK ÇAPAR (9634)",
+            "","YUSUF ZAHİT GÜNDOĞDU, GÖRKEM İÇÖZ, YASİN ARSLAN (9473)","HÜSEYİN MUNGAN, DİLEK CANSU BOZACIOĞLU, AYŞE BENGÜ SÜNBÜL, ÖMER FARUK ÇAPAR (9634)",
             "HÜLAGÜ ETHEMOĞLU (9795)","GÖKHAN DEMİR, AHMET İDİKURT, UTKU KÖKTAN, MUZAFFER KEREM ERTEK (9944)",
 
             "EBRU İNAL, NİLGÜN OKAY (9087)","NÜKET PAKSOY ERBAYDAR, EBRU İNAL, EDİP KAYA (9089)","SEVDA DEMİRÖZ YILDIRIM, FATMA GÜNDÜZ AKAN (9630)",
@@ -103,11 +128,11 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     };
 //for Salon 6
     private String[] txt_title3 ={
-            "AÇILIŞ SUNUMLARI","HANNA RİYANTO (10012)","NİLÜFER AKINCITÜRK, EBRU GÜNAÇAR, AYŞE BETÜL YAZICI (10072)","HATİCE GÜNSELİ DEMİRKOL (10087",
+            "","HANNA RİYANTO (10012)","NİLÜFER AKINCITÜRK, EBRU GÜNAÇAR, AYŞE BETÜL YAZICI (10072)","HATİCE GÜNSELİ DEMİRKOL (10087",
             "DENİZ ÖZGE AYTAÇ, TÜLİN VURAL ARSLAN (10096)",
 
-        "ZAFER GENÇ, FAHRİ BİRİNCİ (9494)","RECEP BAKIŞ, YILDIRIM BAYAZIT, FATMA ÇİĞDEM ŞİRİN (9667)","FATMA ÇİĞDEM ŞİRİN, RECEP BAKIŞ, YILDIRIM BAYAZIT (9675)",
-        "GÖKHAN AL, MEHMET İNANÇ ONUR (9721)",""
+        "FAHRİ ERENEL (9661)","RECEP BAKIŞ, YILDIRIM BAYAZIT, FATMA ÇİĞDEM ŞİRİN (9667)","FATMA ÇİĞDEM ŞİRİN, RECEP BAKIŞ, YILDIRIM BAYAZIT (9675)",
+        "",""
     };
 
     private String[] txt_konu3 ={
@@ -117,14 +142,12 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             "CHANGE/TRANSFORMATİON/AUTHENTİCİTY İN THE BANKS OF PORSUK RİVER İN TERMS OF HUMAN-NATURE RELATİONS","SOSYAL-EKOLOJİK BİR SİSTEM OLARAK MAHALLE’ NİN MEKANSAL DİRENÇLİLİK BOYUTLARINI ÖRNEKLEM ÇALIŞMALARI YAKLAŞIMI ÜZERİNDEN ELE ALMAK\n" +
             "THE CASE STUDY APPROACH TO ADDRESS SPATIAL RESILIENCE DIMENSIONS OF NEIGHBORHOOD AS A SOCIAL-ECOLOGICAL SYSTEM",
 
-            "TÜRKİYE’DE ÜÇ BOYUTLU BETON YAZICININ AZ KATLI KONUT YAPIMINDA KULLANILABİLİRLİĞİ VE KALIP UYGULAMA ÖNERİSİ\n" +
-                    "APPLİCATİON OF THREE DİMENSİONAL CONCRETE PRİNTER İN LOW-RİSE HOUSİNG CONSTRUCTİON İN TURKEY AND USE OF CONCRETE FORMWORK PROPOSAL",
+            "Afet ve Acil Durumlar İçin Hazırlanan Planlar: Karmaşıklık mı? Sadelik ve Basitlik mi? Plans Prepared for Disasters and Emergencies: Complexity? Simplicity and Simpleness?",
             "COĞRAFİ BİLGİ SİSTEMLERİ YARDIMIYLA YÜZEYSEL AKIŞIN RASYONEL METOTLA HESAPLANMASI\n" +
                     "CALCULATİON OF SURFACE FLOW WİTH RATİONAL METHOD USİNG GEOGRAPHİCAL INFORMATİON SYSTEMS",
             "ÇOK KRİTERLİ KARAR VERME MODELİ İLE BARAJ YERİ SEÇİMİNDE DEPREM FAY HATLARININ DİKKATE ALINMASI: YUKARI PORSUK HAVZASI ÖRNEĞİ\n" +
                     "CONSİDERATİON OF EARTHQUAKE FAULT LİNES İN SELECTİON OF DAM SİTE WİTH MULTİ CRİTERİA DECİSİON MODEL: CASE OF PORSUK BASİN",
-            "YANMIŞ KİREMİT TOZU İLAVESİ İLE ZEMİN İYİLEŞTİRME ÇALIŞMASI\n" +
-                    "SOIL IMPROVEMENT WITH ADDITION OF BURNT TILE DUST",
+            "",
             ""
     };
 
@@ -136,7 +159,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
 //for Salon 7
     private String[] txt_title4 ={
-            "AÇILIŞ SUNUMLARI","PINAR ACAR, ELİF YEŞİM KÖSTEN (10044)","RUMEYSA MELAN, BÜŞRA GÜDEN, HAKAN ARSLAN (9489)","FEYZA NUR IŞIK, ESRA MUTLU, HAKAN ARSLAN (9595)",
+            "","PINAR ACAR, ELİF YEŞİM KÖSTEN (10044)","RUMEYSA MELAN, BÜŞRA GÜDEN, HAKAN ARSLAN (9489)","FEYZA NUR IŞIK, ESRA MUTLU, HAKAN ARSLAN (9595)",
             "HAKAN ARSLAN, ALPER ÜNLÜ (9834)",
 
         "CENGİZ İPEK (9654)","ALİ POLAT, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, EMRE AYTUĞ ÖZSÖY (9674)","ÜMİT KUT, NAZİLE URAL (9841)","YEŞİM ERBİL, BÜLENT TÜTMEZ (9954)",""
@@ -168,7 +191,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
 
 //for Salon 8
     private String[] txt_title5 ={
-            "AÇILIŞ SUNUMLARI","FEVZİYE DENİZ ATASAGUN, İFFET BİLLUR (9863)","RUBİN KARAKOYUNLU (9899)","FATMA HARAN, EMRE KİSHALI (9837)","NİLÜFER KIZILKAYA ÖKSÜZ, ALİ MURAT TANYER (9931)",
+            "","FEVZİYE DENİZ ATASAGUN, İFFET BİLLUR (9863)","RUBİN KARAKOYUNLU (9899)","FATMA HARAN, EMRE KİSHALI (9837)","NİLÜFER KIZILKAYA ÖKSÜZ, ALİ MURAT TANYER (9931)",
 
             "YASİN ZENCİR, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, KAMİL BEKİR AFACAN (9669)","GÖKHAN ŞAHİN, GÜLGÜN YILMAZ, NİHAT SİNAN IŞIK, ERSİN GÜLER (9673)","RECEP BAKIŞ, YILDIRIM BAYAZIT, FATMA ÇİĞDEM ŞİRİN (9676)",
             "EKIN OZER (9880)","BİHTER DÖNMEZ (9587)"
@@ -203,21 +226,17 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     };
 //for Salon 9
     private String[] txt_title6 ={
-            "AÇILIŞ SUNUMLARI","EREN BALABAN, ALES SMEJDA, MEHMET İNANC ONUR (9308)","HÜSEYİN BAYRAKTAR, ELİF SAHTİYANCI, ALİ KURU, BURCU YILMAZ BAYRAKTAR (9480)",
-            "ASHFAQUE AHMED SOOMRO (9481)","AİSHA AL.OMAR (9888)",
+            "","SEMRA KÖSE, HASAN TUTAR, SEDEF YARICI (10064)","NİMET KARAGÖZ, FATİH GÜLGEN, KEREM PEKER (10068)",
+            "SEMRA KÖSE (10081)","SEVDE DERMAN SIDDIQUI, ÜLKÜ DUMAN YÜKSEL (9918)",
 
-            "ALİ UTKU ŞAHİN (9415)","RÜYA KAYA (9551)","MİNE NAZAN KERİMAK ÖNER (9668)","ARDA ŞORMAN, MUSTAFA CANSARAN ERTAŞ (10069)",""
+            "ALİ UTKU ŞAHİN (9415)","RÜYA KAYA (9551)","MİNE NAZAN KERİMAK ÖNER (9668)","ARDA ŞORMAN, MUSTAFA CANSARAN ERTAŞ (10069)","MÜGE BİRDEN (9772)"
     };
 
     private String[] txt_konu6 ={
-            "","FARKLİ DOLGU MALZEMESİNE SAHİP DONATİLİ ISTİNAD DUVARLARİNİN PERFORMANSLARİNİN DEGERLENDİRİLMESİ\n" +
-            "PERFORMANCE ANALYSİS OF REİNFORCED EARTH WALLS WİTH DİFFERENT SOİLS",
-            "OKULLARDA YAPISAL OLMAYAN ELEMANLARIN AFET KAYNAKLI OLASI RİSKLERİNİN L TİPİ MATRİS YÖNTEMİYLE BELİRLENMESİ\n" +
-                    "DETERMINATION OF THE POSSIBLE RISKS OF DISASTER RESOURCES OF NON-STRUCTURAL ELEMENTS IN SCHOOLS BY L-TYPE MATRIX METHOD",
-            "IDENTİFİCATİON AND PROMOTİON OF EFFECTİVE ADAPTATİON STRATEGİES İN THARPARKAR DESERT PAKİSTAN\n" +
-                    "IDENTİFİCATİON AND PROMOTİON OF EFFECTİVE ADAPTATİON STRATEGİES İN THARPARKAR DESERT PAKİSTAN",
-            "THE SPECİFİCATİONS OF APPLYİNG BUİLD-BACK-BETTER PROCESS İN THE NORTHWESTERN AREAS OF SYRİA TO FACİLİTATE THE REFUGEES’ RETURN\n" +
-                    "THE SPECİFİCATİONS OF APPLYİNG BUİLD-BACK-BETTER PROCESS İN THE NORTHWESTERN AREAS OF SYRİA TO FACİLİTATE THE REFUGEES’ RETURN",
+            "","KRİZ DÖNEMLERİNDE BİLİŞSEL ESNEKLİĞİN ÖNEMİ ÜZERİNE BİR ARAŞTIRMA A RESEARCH ON THE IMPORTANCE OF COGNITIVE FLEXIBILITY IN CRISIS PERIODS",
+            "Türkiye kar bölge verilerinin coğrafi bilgi sistemleri yardımıyla afet yönetiminde kullanılabilir şekilde güncellenmesi Updating of turkish snow zone data used for disaster management by geographic information systems",
+            "ENDÜSTRİ 4.0'IN ORGANİZASYON YAPILARI İLE ÇALIŞMA YAŞAMINA ETKİSİ ÜZERİNE KURAMSAL BİR ÇERÇEVE A THEORETICAL FRAMEWORK ON THE EFFECT OF INDUSTRY 4.0 ON WORKING LIFE WITH ORGANIZATIONAL STRUCTURES",
+            "İKLİM DEĞİŞİKLİĞİ ÇERÇEVESİNDE KENTSEL DAYANIKLILIĞIN DEĞERLENDİRİLMESİNE YÖNELİK BİR MODEL ÖNERİSİ\n" + "A MODEL TO EVALUATION OF URBAN RESILIENCE IN THE FRAMEWORK OF CLIMATE CHANGE",
 
             "TÜRKİYE AFET MÜDAHALE PLANININ AFET YÖNETİMİ ve YÖNETİM BİLİMİ AÇISINDAN ANALİZİ\n" +
                     "ANALYSIS OF THE TURKEY’S NATIONAL DISASTER RESPONSE PLAN FROM THE POINT OF DISASTER MANAGEMENT AND ADMINISTRATIVE SCIENCES",
@@ -227,40 +246,35 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                     "MUNICIPAL ORGANIC SOLID WASTE MANAGEMENT AFTER DISASTER",
             "KAR İLE YAŞAMAYI ÖĞRENMEK\n" +
                     "LEARNİNG TO LİVE WİTH SNOW\n",
-            ""
+            "SİBER SALDIRILARA KARŞI ELEKTRİK DAĞITIM ŞİRKETLERİNİN HAZIRLIĞI: BİR İŞ SÜREKLİLİĞİ BAKIŞ AÇISINDAN THE PREPAREDNESS OF TURKISH ELECTRICITY DISTRIBUTION FIRMS FOR CYBER ATTACKS: A BUSINESS CONTINUITY PERSPECTIVE"
     };
 
     private String[] oturum_baskan6 = {
-            "ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ","ABDULLAH DİLSİZ",
+            "ALİ TOLGA ÖZDEN, MELDA AÇMAZ ÖZDEN (9806)","ŞERİFE BETÜL ÇETİNKAYA, HİLAL ERKUŞ-ÖZTÜRK (9801)","GİZEM KARACAN (9805)","AYŞE ÇAĞLAYAN, VEYSEL IŞIK, REZA SABER (9800)",
 
             "MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER","MİNE NAZAN KERİMAK ÖNER"
     };
 //for Salon 10
     private String[] txt_title7 ={
-            "AÇILIŞ SUNUMLARI","SEMRA KÖSE, HASAN TUTAR (10064)","NİMET KARAGÖZ, FATİH GÜLGEN, KEREM PEKER (10064)","ASHFAQUE AHMED SOOMRO (9481)","AİSHA AL.OMAR (9888)",
+            "","ALİ TOLGA ÖZDEN, MELDA AÇMAZ ÖZDEN (9806)","ŞERİFE BETÜL ÇETİNKAYA, HİLAL ERKUŞ-ÖZTÜRK (9801)","GİZEM KARACAN (9805)","AYŞE ÇAĞLAYAN, VEYSEL IŞIK, REZA SABER (9800)",
 
-            "İSMAİL GÖKDAY (9662)","MURAT YAMAN, ERKAN ÇAKIR, OZAN YETKİN (9679)","BURAK YAPRAK, SELİM YAZICI (9906)","FAHRİ ÇAKI, ALPER UZUN, ABDURRAHMAN ÖZKAN (9982)",""
+            "İSMAİL GÖKDAY (9662)","MURAT YAMAN, ERKAN ÇAKIR, OZAN YETKİN (9679)","FAHRİ ÇAKI, ALPER UZUN, ABDURRAHMAN ÖZKAN (9982)","",""
 
     };
 
     private String[] txt_konu7 ={
-            "","KRİZ DÖNEMLERİNDE BİLİŞSEL ESNEKLİĞİN ÖNEMİ ÜZERİNE BİR ARAŞTIRMA\n" +
-            "A RESEARCH ON THE IMPORTANCE OF COGNITIVE FLEXIBILITY IN CRISIS PERIODS",
-            "TÜRKİYE KAR BÖLGE VERİLERİNİN COĞRAFİ BİLGİ SİSTEMLERİ YARDIMIYLA AFET YÖNETİMİNDE KULLANILABİLİR ŞEKİLDE GÜNCELLENMESİ\n" +
-                    "UPDATİNG OF TURKİSH SNOW ZONE DATA USED FOR DİSASTER MANAGEMENT BY GEOGRAPHİC İNFORMATİON SYSTEMS",
-            "IDENTİFİCATİON AND PROMOTİON OF EFFECTİVE ADAPTATİON STRATEGİES İN THARPARKAR DESERT PAKİSTAN\n" +
-                    "IDENTİFİCATİON AND PROMOTİON OF EFFECTİVE ADAPTATİON STRATEGİES İN THARPARKAR DESERT PAKİSTAN\n",
-            "THE SPECİFİCATİONS OF APPLYİNG BUİLD-BACK-BETTER PROCESS İN THE NORTHWESTERN AREAS OF SYRİA TO FACİLİTATE THE REFUGEES’ RETURN\n" +
-                    "THE SPECİFİCATİONS OF APPLYİNG BUİLD-BACK-BETTER PROCESS İN THE NORTHWESTERN AREAS OF SYRİA TO FACİLİTATE THE REFUGEES’ RETURN",
+            "","Dirençli Yapılı Çevre Üretiminde Sosyo-Mekansal ve Sosyo-Kültürel Özelliklerin Önemi: Ayvacık-Çanakkale Örneği Importance of Socio-spatial and Socio-cultural Characteristics in Production of Resilient Built Environment: Ayvacık-Çanakkale Example",
+            "TARIM POLİTİKALARINDA DİRENÇLİLİK: KALKINMA PLANLARI ÜZERİNDEN BİR İNCELEME RESILIENCE IN AGRICULTURAL POLICIES: AN INVESTIGATION ON DEVELOPMENT PLANS",
+            "KENTSEL PLANLAMADA İKLİM DİRENCİ TEMASI; ANKARA ÖRNEĞİ CLIMATE RESILIENCE THEME IN URBAN PLANNING; CASE OF ANKARA",
+            "Türkiye’de Mekânsal Planlama Öncesi Aktif Fay Zonları Boyunca Doğal Afet Tehlikelerinin Belirlenmesi ve Haritalama Çalışmaları Natural Disaster Risk Determination and Mapping Along Active Fault Zones Prior to the Urban Planning in Turkey",
 
             "KENTSEL RİSK DEĞERLENDİRMESİ: ANTALYA KONSERVE KOYU ÖRNEĞİ\n" +
                     "URBAN RİSK ASSESSMENT: THE CASE OF ANTALYA KONSERVE COVE",
             "AFET YÖNETİMİNDE YEREL YÖNETİMLERİN YASAL VE KURUMSAL DURUMU: KÜTAHYA ÖRNEĞİ\n" +
                     "LEGAL AND INSTITUTIONAL POSITION OF LOCAL ADMINISTRATIONS ON DISASTER MANAGEMENT: CASE OF KÜTAHYA",
-            "TÜRKİYE’DEKİ KOBİ’LERİN İŞ SÜREKLİLİĞİ YÖNETİMİ KONUSUNDAKİ FARKINDALIK DÜZEYLERİNİN BELİRLENMESİ\n" +
-                    "DETERMİNİNG THE LEVEL OF BUSİNESS CONTİNUİTY MANAGEMENT AWARENESS OF SMES İN TURKEY",
             "DOĞAL AFETLERE HAZIRBULUNUŞLUKTA YEREL TOPLULUK LİDERLİĞİNİN SINIRLARI: MUHTARLAR ÜZERİNE BİR İNCELEME\n" +
                     "THE LIMITS OF LOCAL COMMUNITY LEADERSHIP IN NATURAL DISASTER PREPAREDNESS: A STUDY ON NAIGHBORHOOD HEADMEN",
+            "",
             ""
 
     };
@@ -272,20 +286,17 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     };
 //for Salon 11
     private String[] txt_title8 ={
-            "AÇILIŞ SUNUMLARI","ALİ TOLGA ÖZDEN, MELDA AÇMAZ ÖZDEN (9806)","ŞERİFE BETÜL ÇETİNKAYA, HİLAL ERKUŞ-ÖZTÜRK (9801)", "GİZEM KARACAN (9805)","",
+            "","EREN BALABAN, ALES SMEJDA, MEHMET İNANC ONUR (9308)","ASHFAQUE AHMED SOOMRO (9481)", "AİSHA AL.OMAR, ABDULLAH DİLSİZ (9888)","GÖKHAN AL, MEHMET İNANÇ ONUR (9721)",
 
-             "ÖZGÜR OĞUZ (9401)","AHMET DOĞAN BAYGELDİ, SERPİL GERDAN (9681)","AYLA DEMİRAL, AYFER OLCAY (9712)","SİBEL ÇELİKEL YİĞİTER (9857)","İMRAN ASLAN (9983)"
+             "ÖZGÜR OĞUZ (9401)","AHMET DOĞAN BAYGELDİ, SERPİL GERDAN (9681)","AYLA DEMİRAL, AYFER OLCAY (9712)","İMRAN ASLAN (9983)","İMRAN ASLAN (9984)"
 
     };
 
     private String[] txt_konu8 ={
-            "","DİRENÇLİ YAPILI ÇEVRE ÜRETİMİNDE SOSYO-MEKANSAL VE SOSYO-KÜLTÜREL ÖZELLİKLERİN ÖNEMİ: AYVACIK-ÇANAKKALE ÖRNEĞİ\n" +
-            "IMPORTANCE OF SOCİO-SPATİAL AND SOCİO-CULTURAL CHARACTERİSTİCS İN PRODUCTİON OF RESİLİENT BUİLT ENVİRONMENT: AYVACIK-ÇANAKKALE EXAMPLE",
-            "TARIM POLİTİKALARINDA DİRENÇLİLİK: KALKINMA PLANLARI ÜZERİNDEN BİR İNCELEME\n" +
-                    "RESILIENCE IN AGRICULTURAL POLICIES: AN INVESTIGATION ON DEVELOPMENT PLANS\n",
-            "KENTSEL PLANLAMADA İKLİM DİRENCİ TEMASI; ANKARA ÖRNEĞİ\n" +
-                    "CLIMATE RESILIENCE THEME IN URBAN PLANNING; CASE OF ANKARA",
-            "",
+            "","Farkli Dolgu Malzemesine Sahip Donatili Istinad Duvarlarinin Performanslarinin Degerlendirilmesi Performance Analysis of Reinforced Earth Walls with Different Soils",
+            "Identification and Promotion of Effective Adaptation Strategies in Tharparkar Desert Pakistan Identification and Promotion of Effective Adaptation Strategies in Tharparkar Desert Pakistan",
+            "The specifications of applying Build-Back-Better process in the northwestern areas of Syria to facilitate the refugees’ return The specifications of applying Build-Back-Better process in the northwestern areas of Syria to facilitate the refugees’ return",
+            "YANMIŞ KİREMİT TOZU İLAVESİ İLE ZEMİN İYİLEŞTİRME ÇALIŞMASI SOIL IMPROVEMENT WITH ADDITION OF BURNT TILE DUST",
 
             "89/391 SAYILI AB DİREKTİFİNE GÖRE İŞVERENLERİN GENEL YÜKÜMLÜLÜKLERİ\n" +
                     "GENERAL OBLİGATİONS OF EMPLOYERS ACCORDİNG TO EU DİRECTİVE 89/391",
@@ -293,10 +304,8 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                     "SUPREME COURT'S DECISIONS FOR DEATH WORK ACCIDENTS UNDER OCCUPATIONAL HEALTH AND SAFETY",
             "LABORATUVAR ORTAMLI FEN FAKÜLTELERİNDE İŞ SAĞLIĞI VE GÜVENLİĞİ FARKINDALIĞI\n" +
                     "OCCUPATIONAL HEALTH AND SAFETY AWARENESS IN LABORATORY ENVIRONMENT SCIENCE FACULTIES",
-            "TEKNOLOJİK AFETLERİN ÖNLENMESİNDE İŞ SAĞLIĞI VE GÜVENLİĞİNİN ROLÜ\n" +
-                    "THE ROLE OF OCCUPATİONAL HEALTH AND SAFETY İN THE PREVENTİON OF TECHNOLOGİCAL DİSASTERS",
-            "BİNGÖL İLİNDEKİ ÖĞRETMENLERİN İŞ SAĞLIĞI VE GÜVENLİĞİ SEVİYESİNİN İNCELENMESİ\n" +
-                    "INVESTIGATION OF OCCUPATIONAL HEALTH AND SAFETY LEVEL OF TEACHERS IN BİNGÖL PROVINCE"
+            "BİNGÖL İLİNDEKİ ÖĞRETMENLERİN İŞ SAĞLIĞI VE GÜVENLİĞİ SEVİYESİNİN İNCELENMESİ INVESTIGATION OF OCCUPATIONAL HEALTH AND SAFETY LEVEL OF TEACHERS IN BİNGÖL PROVINCE",
+            "BİNGÖL İLİNDEKİ İNŞAATLARDA İŞ SAĞLIĞI VE GÜVENLİĞİ İNCELEMESİ OCCUPATIONAL HEALTH AND SAFETY INVESTIGATION IN CONSTRUCTION AT BİNGÖL CITY"
     };
 
     private String[] oturum_baskan8 = {
@@ -332,11 +341,10 @@ public class Tab1 extends Fragment implements View.OnClickListener {
             "","","","",""
     };
 //for Salon 4
-//for Salon 12
     private String[] txt_title14 ={
         "","","","","",
 
-        "ALİ EKŞİ (9464)","FAHRİ ÇAKI, ALPER UZUN, BARIŞ ŞENTUNA (9981)","ERDİNÇ GÜNAY (9704)","",""
+        "EZGİ ORHAN, H. ÇAĞATAY KESKİNOK (9717)","FAHRİ ÇAKI, ALPER UZUN, BARIŞ ŞENTUNA (9981)","ERDİNÇ GÜNAY (9704)","GİZEM MESTAV SARICA, TSO-CHIEN PAN (9882)",""
 
 
 
@@ -345,13 +353,11 @@ public class Tab1 extends Fragment implements View.OnClickListener {
     private String[] txt_konu14 ={
             "","","","","",
 
-            "YIKICILIK VE OLASILIĞI ARTAN AFET RİSKLERİNİN TOPLUMSAL YAPI ÜZERİNE ETKİLERİ\n" +
-                    "EFFECTS OF MORE DESTRUCTİVE AND PROBABLE DİSASTER RİSKS ON SOCİAL STRUCTURE",
-            "HANEHALKLARI DÜZEYİNDE DOĞAL AFET FARKINDALIĞI VE HAZIRBULUNUŞLUK: BALIKESİR ÖRNEK OLAY İNCELEMESİ\n" +
-                    "NATURAL DISASTER AWARENESS AND PREPAREDNESS AT THE HOUSEHOLDS LEVEL: BALIKESIR CASE STUDY\n",
+            "Afet sonrası hanehalklarının yer seçim kararları ve kentsel dirençlilik: Değirmendere Örneği Post-disaster location preferences of households and urban resilience: The case of Değirmendere",
+            "HANE HALKLARI DÜZEYİNDE DOĞAL AFET FARKINDALIĞI VE HAZIRBULUNUŞLUK: BALIKESİR ÖRNEK OLAY İNCELEMESİ NATURAL DISASTER AWARENESS AND PREPAREDNESS AT THE HOUSEHOLDS LEVEL: BALIKESIR CASE STUDY",
             "ÜLKEMİZDE AFET RİSKLERİNİN AZALTILMASI İÇİN ÖNCEDEN HAZIRLIK\n" +
                     "PREVIOUS PREPARATION FOR REDUCTION OF DISASTER RISKS IN OUR COUNTRY",
-            "",""
+            "Using Urban Growth Modelling to Estimate the Future Population Exposure of Istanbul to Seismic Hazard Kentsel Modelleme Yontemi ile Istanbul'un Nufus Bazli Sismik Risk Analizi",""
 
 
     };
@@ -382,6 +388,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         btn8 = inflate.findViewById(R.id.btn8);
         btn9 = inflate.findViewById(R.id.btn9);
         btn14 = inflate.findViewById(R.id.btn14); //Salon4
+        button2 = inflate.findViewById(R.id.butn2);
         title = inflate.findViewById(R.id.title_salon);
 
         btn1.setOnClickListener(this);
@@ -394,14 +401,15 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         btn8.setOnClickListener(this);
         btn9.setOnClickListener(this);
         btn14.setOnClickListener(this);
+        button2.setOnClickListener(this);
 
-        Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title,oturum_baskan);
+        Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title_btn2);
         listView = inflate.findViewById(R.id.list_tab1);
         listView.setAdapter(tab1Adapter);
 
      //Default Selection Hall
-        title.setText(getString(R.string.salon3));
-        clilcked_btn = getString(R.string.salon3);
+        title.setText(getString(R.string.salon2));
+        clilcked_btn = getString(R.string.salon2);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -410,132 +418,144 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 if(position == 0){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
                 }else if(position == 1){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -543,66 +563,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 2){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -610,66 +636,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 3){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -677,66 +709,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 4){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -744,66 +782,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 5){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -811,66 +855,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 6){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -878,66 +928,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 7){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -945,66 +1001,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 8){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -1012,66 +1074,72 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 }else if(position == 9){
 
                     Intent go_details = new Intent(getActivity(),Details.class);
-                    if(clilcked_btn.equals("Salon 3")) {
+                    if(clilcked_btn.equals("Salon 2")) {
+                        go_details.putExtra("clock", txt_clock[position]);
+                        go_details.putExtra("speakers",txt_title_btn2[position]);
+                        go_details.putExtra("salon",clilcked_btn);
+                        go_details.putExtra("konu",txt_konu_btn2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan_btn2[position]);
+                    }else if(clilcked_btn.equals("Salon 3")) {
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu[position]);
-                        go_details.putExtra("baskan",oturum_baskan[position]);
+                        //go_details.putExtra("baskan",oturum_baskan[position]);
                     }else if(clilcked_btn.equals("Salon 4")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title14[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu14[position]);
-                        go_details.putExtra("baskan",oturum_baskan14[position]);
+                        //go_details.putExtra("baskan",oturum_baskan14[position]);
                     }else if(clilcked_btn.equals("Salon 5")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title2[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu2[position]);
-                        go_details.putExtra("baskan",oturum_baskan2[position]);
+                        //go_details.putExtra("baskan",oturum_baskan2[position]);
                     }else if(clilcked_btn.equals("Salon 6")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title3[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu3[position]);
-                        go_details.putExtra("baskan",oturum_baskan3[position]);
+                        //go_details.putExtra("baskan",oturum_baskan3[position]);
                     }else if(clilcked_btn.equals("Salon 7")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title4[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu4[position]);
-                        go_details.putExtra("baskan",oturum_baskan4[position]);
+                        //go_details.putExtra("baskan",oturum_baskan4[position]);
                     }else if(clilcked_btn.equals("Salon 8")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title5[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu5[position]);
-                        go_details.putExtra("baskan",oturum_baskan5[position]);
+                        //go_details.putExtra("baskan",oturum_baskan5[position]);
                     }else if(clilcked_btn.equals("Salon 9")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title6[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu6[position]);
-                        go_details.putExtra("baskan",oturum_baskan6[position]);
+                        //go_details.putExtra("baskan",oturum_baskan6[position]);
                     }else if(clilcked_btn.equals("Salon 10")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title7[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu7[position]);
-                        go_details.putExtra("baskan",oturum_baskan7[position]);
+                        //go_details.putExtra("baskan",oturum_baskan7[position]);
                     }else if(clilcked_btn.equals("Salon 11")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title8[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu8[position]);
-                        go_details.putExtra("baskan",oturum_baskan8[position]);
+                        //go_details.putExtra("baskan",oturum_baskan8[position]);
                     }else if(clilcked_btn.equals("Salon 12")){
                         go_details.putExtra("clock", txt_clock[position]);
                         go_details.putExtra("speakers", txt_title9[position]);
                         go_details.putExtra("salon",clilcked_btn);
                         go_details.putExtra("konu",txt_konu9[position]);
-                        go_details.putExtra("baskan",oturum_baskan9[position]);
+                        //go_details.putExtra("baskan",oturum_baskan9[position]);
                     }
 
                     startActivity(go_details);
@@ -1090,12 +1158,23 @@ public class Tab1 extends Fragment implements View.OnClickListener {
         switch (v.getId()){
 
 
+            case R.id.butn2:
+                //Salon 2
+                title.setText(getString(R.string.salon2));
+                clilcked_btn = getString(R.string.salon2);
+
+                Tab1Adapter tabBtn2Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title_btn2);
+                listView = inflate.findViewById(R.id.list_tab1);
+                listView.setAdapter(tabBtn2Adapter);
+
+                break;
+
             case R.id.btn1:
             //Salon 3
                 title.setText(getString(R.string.salon3));
                 clilcked_btn = getString(R.string.salon3);
 
-                Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title,oturum_baskan);
+                Tab1Adapter tab1Adapter = new Tab1Adapter(getActivity(),txt_clock,txt_title);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter);
 
@@ -1106,7 +1185,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon5);
                 clilcked_btn = getString(R.string.salon5);
 
-                Tab1Adapter tab1Adapter2 = new Tab1Adapter(getActivity(),txt_clock,txt_title2,oturum_baskan2);
+                Tab1Adapter tab1Adapter2 = new Tab1Adapter(getActivity(),txt_clock,txt_title2);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter2);
 
@@ -1117,7 +1196,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon6);
                 clilcked_btn = getString(R.string.salon6);
 
-                Tab1Adapter tab1Adapter3 = new Tab1Adapter(getActivity(),txt_clock,txt_title3,oturum_baskan3);
+                Tab1Adapter tab1Adapter3 = new Tab1Adapter(getActivity(),txt_clock,txt_title3);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter3);
 
@@ -1128,7 +1207,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon7);
                 clilcked_btn = getString(R.string.salon7);
 
-                Tab1Adapter tab1Adapter7 = new Tab1Adapter(getActivity(),txt_clock,txt_title4,oturum_baskan4);
+                Tab1Adapter tab1Adapter7 = new Tab1Adapter(getActivity(),txt_clock,txt_title4);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter7);
 
@@ -1139,7 +1218,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon8);
                 clilcked_btn = getString(R.string.salon8);
 
-                Tab1Adapter tab1Adapter8 = new Tab1Adapter(getActivity(),txt_clock,txt_title5,oturum_baskan5);
+                Tab1Adapter tab1Adapter8 = new Tab1Adapter(getActivity(),txt_clock,txt_title5);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter8);
 
@@ -1150,7 +1229,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon9);
                 clilcked_btn = getString(R.string.salon9);
 
-                Tab1Adapter tab1Adapter9 = new Tab1Adapter(getActivity(),txt_clock,txt_title6,oturum_baskan6);
+                Tab1Adapter tab1Adapter9 = new Tab1Adapter(getActivity(),txt_clock,txt_title6);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter9);
 
@@ -1161,7 +1240,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon10);
                 clilcked_btn = getString(R.string.salon10);
 
-                Tab1Adapter tab1Adapter10 = new Tab1Adapter(getActivity(),txt_clock,txt_title7,oturum_baskan7);
+                Tab1Adapter tab1Adapter10 = new Tab1Adapter(getActivity(),txt_clock,txt_title7);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter10);
 
@@ -1172,7 +1251,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon11);
                 clilcked_btn = getString(R.string.salon11);
 
-                Tab1Adapter tab1Adapter11 = new Tab1Adapter(getActivity(),txt_clock,txt_title8,oturum_baskan8);
+                Tab1Adapter tab1Adapter11 = new Tab1Adapter(getActivity(),txt_clock,txt_title8);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter11);
 
@@ -1183,7 +1262,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon12);
                 clilcked_btn = getString(R.string.salon12);
 
-                Tab1Adapter tab1Adapter12 = new Tab1Adapter(getActivity(),txt_clock,txt_title9,oturum_baskan9);
+                Tab1Adapter tab1Adapter12 = new Tab1Adapter(getActivity(),txt_clock,txt_title9);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter12);
 
@@ -1194,7 +1273,7 @@ public class Tab1 extends Fragment implements View.OnClickListener {
                 title.setText(R.string.salon4);
                 clilcked_btn = getString(R.string.salon4);
 
-                Tab1Adapter tab1Adapter14 = new Tab1Adapter(getActivity(),txt_clock,txt_title14,oturum_baskan14);
+                Tab1Adapter tab1Adapter14 = new Tab1Adapter(getActivity(),txt_clock,txt_title14);
                 listView = inflate.findViewById(R.id.list_tab1);
                 listView.setAdapter(tab1Adapter14);
 
