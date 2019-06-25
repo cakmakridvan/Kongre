@@ -71,6 +71,11 @@
             android:label=""
             />
 
+        <activity android:name=".activity.Sponsor"
+            android:theme="@style/AppThemeLight"
+            android:label=""
+            />
+
         <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
     </application>

@@ -46,6 +46,7 @@
     <string name="name_summary_title3">Bildiri özetleriniz, 15 Haziran 2019 tarihine kadar hakemler tarafından değerlendirildikten sonra KABUL/RED durumu tarafınıza bildirilecektir.\n\nSunumu gerçekleştirilen bildirilerin Tam Metinleri değerlendirmeye alınarak idrc 2019 Tam Metinler kitabında veya isteğinize göre Resilience Dergisinde makale olarak basılacaktır.\n\nÖzetler Türkçe ve İngilizce olarak 2 dilde 400 kelimeyi aşmayacak şekilde gönderilmelidir. Tam metinler tek dilde 4 sayfayı geçyecek formatta gönderilebilir.\n\nKayıt ücreti ödemeyen katılımcıların bildirileri özet kitabına girmeyecek ve sunum yapamayacaklardır.\n\nKongreye dinleyici olarak katılmak ücretsizdir. Dinleyiciler kayıt haklarından istifade edemeyeceklerdir. ( Yaka kartı, öğle yemekleri, kongre kiti v.b. )</string>
     <string name="program">Program</string>
     <string name="detail">Detay</string>
+    <string name="sponsor">Sponsorlar</string>
 
     <string name="salon_speaker">OTURUM BAŞKANI:</string>
     <string name="salon1">Salon 1</string>

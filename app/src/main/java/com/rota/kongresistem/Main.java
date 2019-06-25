@@ -17,6 +17,7 @@ import com.rota.kongresistem.activity.EtkinlikBilgileri;
 import com.rota.kongresistem.activity.KatilimciBilgilendirme;
 import com.rota.kongresistem.activity.Program;
 import com.rota.kongresistem.activity.SergiFirmalari;
+import com.rota.kongresistem.activity.Sponsor;
 import com.rota.kongresistem.activity.SummarySending;
 import com.rota.kongresistem.adapter.BildiriAdapter;
 import com.rota.kongresistem.login.Login;
@@ -120,7 +121,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btn_sponsor:
 
-                Toast.makeText(Main.this,"Yakında eklenecektir..",Toast.LENGTH_SHORT).show();
+                Intent go_sponsor = new Intent(Main.this,Sponsor.class);
+                startActivity(go_sponsor);
 
                 break;
 
