@@ -11,6 +11,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.security.ProviderInstaller;
 import com.rota.kongresistem.activity.About;
 import com.rota.kongresistem.activity.BildiriBilgileri;
 import com.rota.kongresistem.activity.EtkinlikBilgileri;
@@ -75,6 +78,15 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
         exhibition.setOnClickListener(this);
         duyurular.setOnClickListener(this);
         katilimci_bilgilendirme.setOnClickListener(this);
+        //for SSL android 4.4 and 5.0
+        try {
+            ProviderInstaller.installIfNeeded(getApplicationContext());
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -147,7 +159,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.app_exit:
 
-                new SweetAlertDialog(Main.this, SweetAlertDialog.WARNING_TYPE)
+/*                new SweetAlertDialog(Main.this, SweetAlertDialog.WARNING_TYPE)
                         .setTitleText(getString(R.string.uygulama_cikis))
                         .setContentText(getString(R.string.hesap_degistir))
                         .setCancelText(getString(R.string.iptal))
@@ -170,7 +182,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
                             }
                         })
-                        .show();
+                        .show();*/
 
                 break;
         }

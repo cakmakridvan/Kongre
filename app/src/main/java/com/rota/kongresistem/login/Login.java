@@ -103,8 +103,15 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Intent go_mainMenu = new Intent(Login.this,Main.class);
+        startActivity(go_mainMenu);
+        finish();
         setContentView(R.layout.login);
-        ButterKnife.bind(Login.this);
+
+
+/*        ButterKnife.bind(Login.this);
         Paper.init(Login.this);
 
         String get_token = Paper.book().read("kongre_token");
@@ -126,7 +133,7 @@ public class Login extends AppCompatActivity {
             e.printStackTrace();
         } catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 
